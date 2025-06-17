@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <div className="flex justify-between items-center p-4">
-        <Link href="/">jenny peng</Link>
+    <div className="flex justify-between items-center p-4 mx-24">
+        <Link href="/" className="text-sm">jenny peng</Link>
         <nav className="flex justify-between items-center p-4">
             <Link href="/" className="text-sm px-4">Home</Link>
             <Link href="/projects" className="text-sm px-4">Projects</Link>

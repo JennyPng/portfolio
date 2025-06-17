@@ -20,6 +20,10 @@
   --color-primary-green: var(--green-light);
   --color-secondary-green: var(--green-med);
   --color-text-primary: var(--green-med);
+
+  --text-sm: 16px;
+  --text-md: 24px;
+  --text-lg: 32px;
 }
 
 @media (prefers-color-scheme: dark) {
