@@ -19,7 +19,9 @@
   --font-mono: var(--font-geist-mono);
   --color-primary-green: var(--green-light);
   --color-secondary-green: var(--green-med);
+  --color-tertiary-green: var(--green-dark);
   --color-text-primary: var(--green-med);
+  --color-text-secondary: var(--pink);
 
   --text-sm: 16px;
   --text-md: 24px;

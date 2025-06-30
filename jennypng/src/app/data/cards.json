@@ -2,13 +2,174 @@
   "intro": {
     "title": "hello, i'm jenny! ₊ ⊹ ",
     "description": [
-      "I am a **software engineer, artist, and musician**!",
-      "I've worked @ *Amazon, GoodRx*; researched @ *UW Makeability Lab*; taught @ *Paul G. Allen School*.",
-      "I currently enjoy full-stack engineering, game dev, new media, and dabbling in any form of creative self-expression."
+      "I am a **software engineer, artist, and musician**, working as a SWE @ Microsoft on the Azure SDK team.",
+      "Previously, I've worked @ *Amazon, GoodRx*; researched @ *UW Makeability Lab*; taught @ *Paul G. Allen School*.",
+      "I currently enjoy full-stack engineering, game dev, new media. I will always enjoy dabbling in any form of creative self-expression."
     ],
+    "dates": "9/22",
     "image_paths": [],
     "type_to_link": [],
-    "buttons": [],
-    "footer": ""
-  }
+    "buttons": [
+      {
+        "text": "about",
+        "link": ""
+      },
+      {
+        "text": "resume",
+        "link": ""
+      }
+    ],
+    "footer": "",
+    "drag": true
+  },
+    "projects": [
+      {
+        "title": "jam journal",
+        "description": [
+          "for anyone"
+        ],
+        "image_paths": [],
+        "type_to_link": [],
+        "buttons": [
+          {
+            "text": "demo",
+            "link": ""
+          }
+        ],
+        "footer": "typescript, next.js, supabase, sql, youtube api",
+        "tags": ["featured", "web"]
+       },
+      {
+        "title": "AR RC car racing",
+        "description": [
+          "for anyone"
+        ],
+        "image_paths": [],
+        "type_to_link": [],
+        "buttons": [
+          {
+            "text": "demo",
+            "link": ""
+          }
+        ],
+        "footer": "c#, unity, photon fusion",
+        "tags": ["featured", "ar/vr", "game"]
+       },
+      {
+        "title": "AR Student Emotion Analyzer",
+        "description": [
+          "for anyone"
+        ],
+        "image_paths": [],
+        "type_to_link": [],
+        "buttons": [
+          {
+            "text": "github",
+            "link": ""
+          },
+          {
+            "text": "paper",
+            "link": ""
+          }
+        ],
+        "footer": "python, c#, tensorflow, unity, YOLO, pandas, openAI",
+        "tags": ["featured", "ar/vr", "course"]
+      },
+      {
+        "title": "crown of persuasion",
+        "description": [
+          "for anyone"
+        ],
+        "image_paths": [],
+        "type_to_link": [],
+        "buttons": [
+          {
+            "text": "itch.io",
+            "link": ""
+          }
+        ],
+        "footer": "c#, unity, clip studio paint",
+        "tags": ["featured", "game"]
+       },
+       {
+        "title": "runring",
+        "description": [
+          "for anyone"
+        ],
+        "image_paths": [],
+        "type_to_link": [],
+        "buttons": [
+          {
+            "text": "devpost",
+            "link": ""
+          }
+        ],
+        "footer": "javascript, snap lens studio, soundtrap",
+        "tags": ["ar/vr", "game", "hackathon"]
+       },
+      {
+        "title": "distributed key-value store",
+        "description": [
+          "for anyone"
+        ],
+        "footer": "C",
+        "tags": ["course"]
+       },
+        {
+        "title": "operating system",
+        "description": [
+          "for anyone"
+        ],
+        "footer": "Java",
+        "tags": ["course"]
+       },
+      {
+        "title": "no bull",
+        "description": [
+          "for anyone"
+        ],
+        "image_paths": [],
+        "type_to_link": [],
+        "buttons": [
+          {
+            "text": "devpost",
+            "link": ""
+          }
+        ],
+        "footer": "react, figma, gpt",
+        "tags": ["web", "hackathon"]
+       }, 
+        {
+        "title": "quagga",
+        "description": [
+          "for anyone"
+        ],
+        "image_paths": [],
+        "type_to_link": [],
+        "buttons": [
+          {
+            "text": "devpost",
+            "link": ""
+          }
+        ],
+        "footer": "react, figma, gpt",
+        "tags": ["web", "hackathon"]
+       }, 
+        {
+        "title": "mob",
+        "description": [
+          "for anyone"
+        ],
+        "image_paths": [],
+        "type_to_link": [],
+        "buttons": [
+          {
+            "text": "devpost",
+            "link": ""
+          }
+        ],
+        "footer": "react, figma, gpt",
+        "tags": ["web", "hackathon"]
+       }
+    ]
 } 

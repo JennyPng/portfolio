@@ -1,10 +1,11 @@
 import Card from "./card";
 import cardsData from "../data/cards.json";
 
-export default function Intro() {
+export default function Intro({className} : {className?: string}) {
   return (
-    <div>
-      <Card {...cardsData.intro} />
+    <div className="intro">
+      <Card {...cardsData.intro} className={`inline-block ${className}`} />
     </div>
   );
 }
+ 
