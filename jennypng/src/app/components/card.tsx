@@ -17,9 +17,6 @@ export interface CardProps {
   drag?: boolean
 }
 
-// TODO make enum?
-export type CardTags = "featured" | "ar/vr" | "game" | "web" | "hackathon" | "course" | "research" | "design" | "other"
-
 const formatText = (text: string | string[]) => {
   const lines = Array.isArray(text) ? text : text.split('\n');
   return lines.map((line, i) => {
@@ -51,9 +48,9 @@ const formatText = (text: string | string[]) => {
 
 export default function Card({ title, description, image_paths, type_to_link, buttons, footer, className }: CardProps) {
   return (
-    <div className={`card border-2 my-4 mx-4 border-primary-green bg-color-background rounded-lg p-3 min-w-[30vw] max-w-[400px] grid gap-3 duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
+    <div className={`card border-2 my-4 mx-4 border-primary-green bg-color-background rounded-lg p-3 w-[70vw] md:min-w-[25vw] md:max-w-[300px] lg:w-[450px] grid gap-3 duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
       <div className="grid gap-2">
-        <p className="p-0">{title}</p>
+        <p className="p-0 text-md">{title}</p>
         <hr className="border-1 -mx-3 border-primary-green" />
       </div>
       

@@ -10,6 +10,7 @@
 
   --background: #F5F5F5;
   --foreground: var(--green-med);
+
 }
 
 @theme inline {
@@ -21,7 +22,7 @@
   --color-secondary-green: var(--green-med);
   --color-tertiary-green: var(--green-dark);
   --color-text-primary: var(--green-med);
-  --color-text-secondary: var(--pink);
+  --color-primary-pink: var(--pink);
 
   --text-sm: 16px;
   --text-md: 24px;
