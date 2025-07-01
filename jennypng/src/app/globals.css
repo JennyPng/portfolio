@@ -11,6 +11,8 @@
   --background: #F5F5F5;
   --foreground: var(--green-med);
 
+  scroll-behavior: smooth;
+
 }
 
 @theme inline {

@@ -26,14 +26,15 @@
       {
         "title": "jam journal",
         "description": [
-          "for anyone"
+          "For people that analyze lyrics, make ultra-specific playlists, or just want to document their thoughts on music!",
+          "Users can import songs and control playback via the YouTube API, take notes on specific songs, and add timestamped or lyric-specific annotations while listening in-app."
         ],
         "image_paths": [],
         "type_to_link": [],
         "buttons": [
           {
             "text": "demo",
-            "link": ""
+            "link": "https://www.linkedin.com/posts/activity-7340496848471674881-ItnG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC62kOMBdro80NB32LqRtJRDHzoMCwZWryA"
           }
         ],
         "footer": "typescript, next.js, supabase, sql, youtube api",
@@ -42,7 +43,8 @@
       {
         "title": "AR RC car racing",
         "description": [
-          "for anyone"
+          "Multiplayer AR racing game allowing players in the same room to compete on custom, environment-aware, procedurally-generated racetracks.",
+          "Built for Virtual Reality Capstone course in a team of 4, using Meta Quest."
         ],
         "image_paths": [],
         "type_to_link": [],
