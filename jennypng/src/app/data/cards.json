@@ -75,7 +75,7 @@
         "tags": ["featured", "ar/vr", "game"]
        },
       {
-        "title": "AR Student Emotion Analyzer",
+        "title": "AR Student Emotion Analyzer 😥",
         "dates": {
             "startMonth": 3,
             "startYear": 2025,
@@ -105,10 +105,10 @@
         "tags": ["featured", "ar/vr", "course", "ai/ml"]
       },
       {
-        "title": "crown of persuasion",
+        "title": "crown of persuasion 👑",
         "description": [
-          "Visual novel / 2D platformer where you are a sentient crown that grants your wearer immense persuasive ability, and is responsible for choosing a new village leader.",
-          "Implemented dialogue system from scratch, animated player characters, and co-wrote story. Built in 3 weeks for Pirate Game Jam 16, with theme \"you are the weapon.\""
+          "Visual novel / 2D platformer where you are a sentient crown that grants your wearer immense persuasive ability, and are responsible for choosing a new village leader.",
+          "Implemented dialogue system from scratch, animated player characters, and co-wrote story. Built in 3 weeks for Pirate Game Jam 16, with theme *\"you are the weapon.\"*"
         ],
         "dates": {
             "startMonth": 1,

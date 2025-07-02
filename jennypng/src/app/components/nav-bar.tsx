@@ -9,7 +9,7 @@ export default function NavBar() {
               <Link href="/#projects" className="text-sm px-4 hover:text-tertiary-green">Projects</Link>
               <Link href="/about-me" className="text-sm px-4 hover:text-tertiary-green">About Me</Link>
               <Link href="/contact" className="text-sm px-4 hover:text-tertiary-green">Contact</Link>
-              <Link href="/contact" className="text-sm px-4 hover:text-tertiary-green">🌱</Link>
+              <Link href="https://jennypng.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-sm px-4 hover:text-tertiary-green">🌱</Link>
           </nav>
       </div>
         <hr className="border-1 -mx-3 border-primary-green" />
