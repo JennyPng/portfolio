@@ -3,7 +3,7 @@
     "title": "hello, i'm jenny! ₊ ⊹ ",
     "description": [
       "I am a **software engineer, artist, and musician**, working as a SWE @ Microsoft on the Azure SDK team.",
-      "Previously, I've worked @ *Amazon, GoodRx*; researched @ *UW Makeability Lab*; taught @ *Paul G. Allen School*.",
+      "Previously, I've worked @ *Amazon, GoodRx*; researched @ *UW Makeability Lab*; taught @ [*Paul G. Allen School*](https://courses.cs.washington.edu/courses/cse351/).",
       "I currently enjoy full-stack engineering, game dev, new media. I will always enjoy dabbling in any form of creative self-expression."
     ],
     "type_to_link": [],
@@ -126,8 +126,8 @@
        {
         "title": "runring",
         "description": [
-          "AR experience that transforms reality into a platform ring collection game to motivate you to run, built for Snap Spectacles in 24 hours during Dubhacks 2024.",
-          "Produced game music :p"
+          "AR experience that transforms reality into a platform ring collection game to motivate you to run. Produced game music :p",
+          "Built for Snap Spectacles in 24 hours during [Dubhacks 2024](), placing 3rd in Snap side challenge."
         ],
         "image_paths": [{
           "image_path": "/images/runring.gif",
@@ -156,7 +156,7 @@
       {
         "title": "distributed key-value store",
         "description": [
-          "for anyone"
+          "Implemented a linearizable, sharded key-value store with multi-key updates and dynamic load balancing for CSE452. Used Paxos algorithm."
         ],
         "dates": {
             "startMonth": 3,
@@ -164,7 +164,7 @@
             "endMonth": 6,
             "endYear": 2024
         },
-        "footer": "C",
+        "footer": "java",
         "tags": ["course"]
        },
         {
@@ -172,55 +172,110 @@
         "description": [
           "for anyone"
         ],
-        "footer": "Java",
+        "footer": "C",
         "tags": ["course"]
        },
       {
-        "title": "no bull",
+        "title": "shameify",
         "description": [
-          "for anyone"
+          "Chrome extension that shames you while online shopping, to combat overconsumption. An LLM roasts your ethics based on the product details.",
+          "Built for [Treehacks 2024](https://dh24.dubhacks.co/)."
         ],
-
-        "type_to_link": [],
+        "dates": {
+            "startMonth": 2,
+            "startYear": 2024,
+            "endMonth": 2,
+            "endYear": 2024
+        },
+        "image_paths": [{
+          "image_path": "/images/shame.jpg",
+          "image_alt": "shameify figma prototype"
+        }],
         "buttons": [
           {
             "text": "devpost",
-            "link": ""
+            "link": "https://devpost.com/software/shamify"
           }
         ],
-        "footer": "react, figma, gpt",
+        "footer": "python, reflex, gpt",
+        "tags": ["hackathon"]
+       }, 
+      {
+        "title": "nobull",
+        "description": [
+          "Combats the spread of misinformation by fact checking verbal claims made in Tiktoks.",
+          "Honorable mention @ [Dubhacks 2023](https://dh23.dubhacks.co/)."
+        ],
+        "dates": {
+            "startMonth": 10,
+            "startYear": 2023,
+            "endMonth": 10,
+            "endYear": 2023
+        },
+        "image_paths": [{
+          "image_path": "/images/nobull.jpg",
+          "image_alt": "no bull screenshot"
+        }],
+        "buttons": [
+          {
+            "text": "devpost",
+            "link": "https://devpost.com/software/nobull-ousjgz"
+          }
+        ],
+        "footer": "react, firebase, figma, gpt",
         "tags": ["web", "hackathon"]
        }, 
-        {
+      {
         "title": "quagga",
         "description": [
-          "for anyone"
+          "Trivia game web app that acts as a fun icebreaker to foster easier connections between strangers.",
+          "Players submit custom questions, answer them, and vote on who they think wrote an answer.",
+          "Won Slalom Game Jam side challenge @ [Dubhacks 2022](https://dh22.dubhacks.co/)."
         ],
-
-        "type_to_link": [],
+        "dates": {
+            "startMonth": 10,
+            "startYear": 2022,
+            "endMonth": 10,
+            "endYear": 2022
+        },
+        "image_paths": [{
+          "image_path": "/images/quagga.jpg",
+          "image_alt": "quagga prototype screenshot"
+        }],
         "buttons": [
           {
             "text": "devpost",
-            "link": ""
+            "link": "https://devpost.com/software/quagga"
           }
         ],
-        "footer": "react, figma, gpt",
+        "footer": "react, figma, firebase",
         "tags": ["web", "hackathon"]
        }, 
         {
         "title": "mob",
         "description": [
-          "for anyone"
+          "Web app that helps users decide where and when to eat with friends.",
+          "Placed in the top 3 finalists for the studio track @ [Dubhacks 2021](https://dh21.dubhacks.co/) and won Facebook Social Good award."
         ],
-
-        "type_to_link": [],
+        "dates": {
+            "startMonth": 10,
+            "startYear": 2021,
+            "endMonth": 10,
+            "endYear": 2021
+        },
+        "image_paths": [
+          {
+            "image_path": "/images/mob.jpg",
+            "image_alt": "mob prototype"
+          }
+        ],
         "buttons": [
           {
             "text": "devpost",
-            "link": ""
+            "link": "https://devpost.com/software/mob-ejyq7k"
           }
         ],
-        "footer": "react, figma, gpt",
+        "footer": "react, figma",
         "tags": ["web", "hackathon"]
        }
     ]

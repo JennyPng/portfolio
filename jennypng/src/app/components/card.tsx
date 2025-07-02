@@ -30,32 +30,66 @@ export interface CardProps {
 
 const formatText = (text: string | string[]) => {
   const lines = Array.isArray(text) ? text : text.split('\n');
-  return lines.map((line, i) => {
-    const boldParts = line.split(/(\*\*.*?\*\*)/g).map((part, j) => {
+
+  // Helper: parse bold + italic in a string fragment
+  const parseFormatting = (input: string, keyPrefix: string) => {
+    const boldParts = input.split(/(\*\*.*?\*\*)/g).map((part, i) => {
       if (part.startsWith('**') && part.endsWith('**')) {
-        // for bold parts, also check for italics
-        const boldText = part.slice(2, -2);
-        const italicParts = boldText.split(/(\*.*?\*)/g).map((italicPart, k) => {
+        const innerBold = part.slice(2, -2);
+        const italicParts = innerBold.split(/(\*.*?\*)/g).map((italicPart, j) => {
           if (italicPart.startsWith('*') && italicPart.endsWith('*')) {
-            return <em key={k}><strong>{italicPart.slice(1, -1)}</strong></em>;
+            return <em key={`${keyPrefix}-b${i}-i${j}`}><strong>{italicPart.slice(1, -1)}</strong></em>;
           }
-          return <strong key={k}>{italicPart}</strong>;
+          return <strong key={`${keyPrefix}-b${i}-t${j}`}>{italicPart}</strong>;
         });
-        return <span key={j}>{italicParts}</span>;
+        return <span key={`${keyPrefix}-b${i}`}>{italicParts}</span>;
       }
-      // For non-bold parts, check for italics
-      const italicParts = part.split(/(\*.*?\*)/g).map((italicPart, k) => {
+
+      const italicParts = part.split(/(\*.*?\*)/g).map((italicPart, j) => {
         if (italicPart.startsWith('*') && italicPart.endsWith('*')) {
-          return <em key={k}>{italicPart.slice(1, -1)}</em>;
+          return <em key={`${keyPrefix}-i${i}-j${j}`}>{italicPart.slice(1, -1)}</em>;
         }
         return italicPart;
       });
-      return <span key={j}>{italicParts}</span>;
+
+      return <span key={`${keyPrefix}-n${i}`}>{italicParts}</span>;
     });
-    // TODO allow links
-    return <p key={i} className="text-sm">{boldParts}</p>;
+
+    return boldParts;
+  };
+
+  return lines.map((line, lineIndex) => {
+    // Step 1: split into link and non-link parts
+    const segments = line.split(/(\[.*?\]\(.*?\))/g).map((segment, segIndex) => {
+      const match = segment.match(/^\[(.*?)\]\((.*?)\)$/);
+      if (match) {
+        const [, linkText, linkHref] = match;
+        const parsedLinkContent = parseFormatting(linkText, `link-${lineIndex}-${segIndex}`);
+        return (
+          <a
+            key={`link-${lineIndex}-${segIndex}`}
+            href={linkHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-teal hover:bg-teal-dark duration-170"
+          >
+            {parsedLinkContent}
+          </a>
+        );
+      }
+
+      // Otherwise, it's normal text with possible formatting
+      return (
+        <span key={`text-${lineIndex}-${segIndex}`}>
+          {parseFormatting(segment, `text-${lineIndex}-${segIndex}`)}
+        </span>
+      );
+    });
+
+    return <p key={lineIndex} className="text-sm">{segments}</p>;
   });
 };
+
 
 export default function Card({ title, description, image_paths, type_to_link, maxWidth, buttons, footer, className, dates }: CardProps) {
   const startDate = dates ? new Date(dates.startYear, dates.startMonth - 1) : undefined;
@@ -85,7 +119,7 @@ export default function Card({ title, description, image_paths, type_to_link, ma
         <hr className="border-1 -mx-3 border-primary-green" />
       </div>
 
-      {image_paths && <Image src={image_paths[0].image_path} width={800} height={100} alt={image_paths[0].image_alt} className="pt-4 object-cover"></Image>}
+      {image_paths && <Image src={image_paths[0].image_path} width={800} height={300} alt={image_paths[0].image_alt} className="pt-4"></Image>}
       
       <div className="grid gap-2 pt-4 max-h-[600px]">
         {formatText(description)}
