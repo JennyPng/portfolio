@@ -8,7 +8,8 @@ export default function NavBar() {
           <nav className="flex flex-wrap justify-between items-center p-4 pb-0 mb-0">
               <Link href="/#projects" className="text-sm px-4 hover:text-tertiary-green">Projects</Link>
               <Link href="/about-me" className="text-sm px-4 hover:text-tertiary-green">About Me</Link>
-              <Link href="/contact" className="text-sm px-4 hover:text-tertiary-green">Contact</Link>
+              <Link href="/about-me" className="text-sm px-4 hover:text-tertiary-green">Blog</Link>
+              <Link href="/about-me" className="text-sm px-4 hover:text-tertiary-green">Art</Link>
               <Link href="https://jennypng.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-sm px-4 hover:text-tertiary-green">🌱</Link>
           </nav>
       </div>

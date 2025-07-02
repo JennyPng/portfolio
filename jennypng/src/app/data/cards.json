@@ -2,7 +2,7 @@
   "intro": {
     "title": "hello, i'm jenny! ₊ ⊹ ",
     "description": [
-      "I am a **software engineer, artist, and musician**, working as a SWE @ Microsoft on the Azure SDK team.",
+      "I am a **software engineer, artist, and musician**, incoming @ Microsoft.",
       "Previously, I've worked @ *Amazon, GoodRx*; researched @ [*UW Makeability Lab*](http://makeabilitylab.cs.washington.edu/); taught @ [*Paul G. Allen School*](https://courses.cs.washington.edu/courses/cse351/).",
       "I currently enjoy full-stack engineering, game dev, new media. I will always enjoy dabbling in any form of creative self-expression."
     ],
@@ -50,7 +50,7 @@
         "description": [
           "Multiplayer AR racing game allowing players in the same room to compete on custom, **environment-aware, procedurally-generated racetracks.**",
           "Implemented optimized **3D pathfinding** using octrees and A-star search for obstacle avoidance, and RPCs for synchronizing networked objects.",
-          "Built for VR Capstone course in a team of 4, using Meta Quest."
+          "Built for [VR Capstone](https://courses.cs.washington.edu/courses/cse481v/25sp/) course in a team of 4, using Meta Quest."
         ],
         "dates": {
           "startMonth": 4,
@@ -72,7 +72,7 @@
           }
         ],
         "footer": "c#, unity, photon fusion",
-        "tags": ["featured", "ar/vr", "game"]
+        "tags": ["featured", "ar/vr", "game", "course"]
        },
       {
         "title": "AR Student Emotion Analyzer 😥",
