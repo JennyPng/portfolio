@@ -79,7 +79,7 @@ export default function Card({ title, description, image_paths, type_to_link, ma
         <div className="pb-2 flex flex-row justify-between">
           <p className="text-md">{title}</p>
           {dates &&           
-            <p className="text-sm text-primary-green pt-2 pr-2">{formattedStartDate != formattedEndDate ? `${formattedStartDate} - ${formattedEndDate}` : formattedStartDate}</p>
+            <p className="text-sm text-primary-green pt-1 pr-2">{formattedStartDate != formattedEndDate ? `${formattedStartDate} - ${formattedEndDate}` : formattedStartDate}</p>
           }
         </div>
         <hr className="border-1 -mx-3 border-primary-green" />

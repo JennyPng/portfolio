@@ -48,8 +48,9 @@
       {
         "title": "AR RC car racing 🏎️",
         "description": [
-          "Multiplayer AR racing game allowing players in the same room to compete on custom, environment-aware, procedurally-generated racetracks.",
-          "Built for Virtual Reality Capstone course in a team of 4, using Meta Quest."
+          "Multiplayer AR racing game allowing players in the same room to compete on custom, **environment-aware, procedurally-generated racetracks.**",
+          "Implemented optimized **3D pathfinding** using octrees and A-star search for obstacle avoidance, and RPCs for synchronizing networked objects.",
+          "Built for VR Capstone course in a team of 4, using Meta Quest."
         ],
         "dates": {
           "startMonth": 4,
@@ -57,6 +58,12 @@
           "endMonth": 6,
           "endYear": 2025
         },
+        "image_paths": [
+          {
+            "image_path": "/images/arc-gif.gif",
+            "image_alt": "ar car racing demo gif"
+          }
+        ],
         "type_to_link": [],
         "buttons": [
           {
@@ -119,14 +126,28 @@
        {
         "title": "runring",
         "description": [
-          "for anyone"
+          "AR experience that transforms reality into a platform ring collection game to motivate you to run, built for Snap Spectacles in 24 hours during Dubhacks 2024.",
+          "Produced game music :p"
         ],
-
+        "image_paths": [{
+          "image_path": "/images/runring.gif",
+          "image_alt": "runring demo gif"
+        }],
+        "dates": {
+            "startMonth": 10,
+            "startYear": 2024,
+            "endMonth": 10,
+            "endYear": 2024
+        },
         "type_to_link": [],
         "buttons": [
           {
             "text": "devpost",
-            "link": ""
+            "link": "https://devpost.com/software/youarhedgehog"
+          },
+          {
+            "text": "demo",
+            "link": "https://youtu.be/uAAEjXZoeMI"
           }
         ],
         "footer": "javascript, snap lens studio, soundtrap",
@@ -137,6 +158,12 @@
         "description": [
           "for anyone"
         ],
+        "dates": {
+            "startMonth": 3,
+            "startYear": 2024,
+            "endMonth": 6,
+            "endYear": 2024
+        },
         "footer": "C",
         "tags": ["course"]
        },
