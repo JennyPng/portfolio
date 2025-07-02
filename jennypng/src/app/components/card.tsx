@@ -65,7 +65,7 @@ export default function Card({ title, description, image_paths, type_to_link, bu
     endDate === "present" ? endDate : formatDate(endDate as Date);
 
   return (
-    <div className={`card flex-col border-2 border-primary-green bg-secondary-background rounded-lg p-3 w-[70vw] md:min-w-[25vw] md:max-w-[300px] lg:w-[450px] duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
+    <div className={`card flex-col border-2 border-primary-green bg-secondary-background rounded-lg my-2 md:my-0 p-3 w-[80vw] md:min-w-[25vw] md:max-w-[300px] lg:w-[450px] duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
       <div className="flex-col">
         <div className="pb-2 flex flex-row justify-between">
           <p className="text-md">{title}</p>
