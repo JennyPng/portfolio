@@ -85,7 +85,10 @@
         "description": [
           "Real-time system using emotion classification, live transcription, and AR to provide live instructor feedback during lecture when students are confused."
         ],
-
+        "image_paths": [{
+          "image_path": "/images/emo.gif",
+          "image_alt": "AR emotion analyzer demo gif"
+        }],
         "type_to_link": [],
         "buttons": [
           {
@@ -97,14 +100,14 @@
             "link": "https://github.com/JennyPng/AR-student-emotion-analyzer/blob/main/VRFinalProject.pdf"
           }
         ],
-        "footer": "python, c#, tensorflow, unity, YOLO, pandas, gpt",
-        "tags": ["featured", "ar/vr", "course"]
+        "footer": "python, c#, tensorflow, unity, YOLO, whisper, pandas, gpt",
+        "tags": ["featured", "ar/vr", "course", "ai/ml"]
       },
       {
         "title": "crown of persuasion",
         "description": [
           "Visual novel / 2D platformer where you are a sentient crown that grants your wearer immense persuasive ability, and is responsible for choosing a new village leader.",
-          "Implemented dialogue system from scratch, animated player characters, and wrote story. Built in 3 weeks for Pirate Game Jam, with theme \"you are the weapon.\""
+          "Implemented dialogue system from scratch, animated player characters, and co-wrote story. Built in 3 weeks for Pirate Game Jam, with theme \"you are the weapon.\""
         ],
         "dates": {
             "startMonth": 1,
@@ -112,7 +115,10 @@
             "endMonth": 1,
             "endYear": 2025
         },
-
+        "image_paths": [{
+          "image_path": "/images/crown.gif",
+          "image_alt": "crown of persuasion gif"
+        }],
         "type_to_link": [],
         "buttons": [
           {
@@ -249,7 +255,7 @@
           }
         ],
         "footer": "react, figma, firebase",
-        "tags": ["web", "hackathon"]
+        "tags": ["web", "hackathon", "game"]
        }, 
         {
         "title": "mob",

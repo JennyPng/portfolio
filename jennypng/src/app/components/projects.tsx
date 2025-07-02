@@ -4,7 +4,7 @@ import cardsData from "../data/cards.json";
 import { CardProps } from "./card";
 import { useState } from "react";
 
-const CardTags = ["featured", "all", "ar/vr", "web", "game", "hackathon", "course" , "research" , "design"]
+const CardTags = ["featured", "all", "ar/vr", "web", "ai/ml", "game", "hackathon", "course" , "research" , "design"]
 
 const projects : CardProps[] = cardsData.projects
 
