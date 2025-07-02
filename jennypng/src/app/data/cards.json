@@ -97,6 +97,12 @@
         "description": [
           "for anyone"
         ],
+        "dates": {
+            "startMonth": 1,
+            "startYear": 2025,
+            "endMonth": 1,
+            "endYear": 2025
+        },
         "image_paths": [],
         "type_to_link": [],
         "buttons": [

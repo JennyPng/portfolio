@@ -52,15 +52,25 @@ const formatText = (text: string | string[]) => {
 };
 
 export default function Card({ title, description, image_paths, type_to_link, buttons, footer, className, dates }: CardProps) {
-  const startDate = dates ? new Date(dates.startYear, dates.startMonth - 1).toDateString() : undefined 
-  const endDate = (dates?.endMonth && dates?.endYear) ? new Date(dates.endYear, dates.endMonth - 1).toDateString() : "present"
+  const startDate = dates ? new Date(dates.startYear, dates.startMonth - 1) : undefined;
+  const endDate = (dates?.endMonth && dates?.endYear)
+    ? new Date(dates.endYear, dates.endMonth - 1)
+    : "present";
+
+  const formatDate = (date: Date) =>
+    date.toLocaleString("en-US", { month: "short", year: "numeric" }); // e.g., "Apr 2025"
+
+  const formattedStartDate = startDate ? formatDate(startDate) : undefined;
+  const formattedEndDate =
+    endDate === "present" ? endDate : formatDate(endDate as Date);
+
   return (
     <div className={`card flex-col border-2 border-primary-green bg-secondary-background rounded-lg p-3 w-[70vw] md:min-w-[25vw] md:max-w-[300px] lg:w-[450px] duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
       <div className="flex-col">
         <div className="pb-2 flex flex-row justify-between">
           <p className="text-md">{title}</p>
           {dates &&           
-            <p className="text-sm text-primary-green pt-2 pr-2">{startDate != endDate ? `${startDate} - ${endDate}` : startDate}</p>
+            <p className="text-sm text-primary-green pt-2 pr-2">{formattedStartDate != formattedEndDate ? `${formattedStartDate} - ${formattedEndDate}` : formattedStartDate}</p>
           }
         </div>
         <hr className="border-1 -mx-3 border-primary-green" />
