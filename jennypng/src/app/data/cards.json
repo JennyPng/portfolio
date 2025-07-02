@@ -3,7 +3,7 @@
     "title": "hello, i'm jenny! ₊ ⊹ ",
     "description": [
       "I am a **software engineer, artist, and musician**, working as a SWE @ Microsoft on the Azure SDK team.",
-      "Previously, I've worked @ *Amazon, GoodRx*; researched @ *UW Makeability Lab*; taught @ [*Paul G. Allen School*](https://courses.cs.washington.edu/courses/cse351/).",
+      "Previously, I've worked @ *Amazon, GoodRx*; researched @ [*UW Makeability Lab*](http://makeabilitylab.cs.washington.edu/); taught @ [*Paul G. Allen School*](https://courses.cs.washington.edu/courses/cse351/).",
       "I currently enjoy full-stack engineering, game dev, new media. I will always enjoy dabbling in any form of creative self-expression."
     ],
     "type_to_link": [],
@@ -83,7 +83,8 @@
             "endYear": 2025
         },
         "description": [
-          "Real-time system using emotion classification, live transcription, and AR to provide live instructor feedback during lecture when students are confused."
+          "Real-time system using emotion classification, live transcription, and AR to provide live instructor feedback during lecture when students are confused.",
+          "YOLOv11 detects student faces, while a CNN continuously predicts their emotions to identify spikes in negative emotions. Simultaneously, Faster-Whisper transcribes the lecture, and when confusion spikes occur, the relevant transcript segment is sent to GPT to identify confusing topics."
         ],
         "image_paths": [{
           "image_path": "/images/emo.gif",
@@ -107,7 +108,7 @@
         "title": "crown of persuasion",
         "description": [
           "Visual novel / 2D platformer where you are a sentient crown that grants your wearer immense persuasive ability, and is responsible for choosing a new village leader.",
-          "Implemented dialogue system from scratch, animated player characters, and co-wrote story. Built in 3 weeks for Pirate Game Jam, with theme \"you are the weapon.\""
+          "Implemented dialogue system from scratch, animated player characters, and co-wrote story. Built in 3 weeks for Pirate Game Jam 16, with theme \"you are the weapon.\""
         ],
         "dates": {
             "startMonth": 1,
@@ -132,7 +133,7 @@
        {
         "title": "runring",
         "description": [
-          "AR experience that transforms reality into a platform ring collection game to motivate you to run. Produced game music :p",
+          "AR game that transforms reality into a platform ring collection game to motivate you to run. Produced game music :p",
           "Built for Snap Spectacles in 24 hours during [Dubhacks 2024](), placing 3rd in Snap side challenge."
         ],
         "image_paths": [{
