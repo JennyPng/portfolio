@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export interface CardProps {
   title: string;
   description: string | string[];
@@ -8,7 +10,10 @@ export interface CardProps {
     endYear?: number
   };
   maxWidth?: number,
-  image_paths?: string[]; // show slideshow if multiple
+  image_paths?: {
+    image_path: string,
+    image_alt: string
+  }[]; // show slideshow if multiple
   type_to_link?: {
     type: "github" | "website" | "blog" | "email";
     link: string;
@@ -69,7 +74,7 @@ export default function Card({ title, description, image_paths, type_to_link, ma
   console.log(width)
 
   return (
-    <div className={`card flex-col border-2 border-primary-green bg-secondary-background rounded-lg my-2 max-w-[${width}px] md:my-0 p-3 duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
+    <div className={`card flex-col border-2 border-primary-green bg-secondary-background rounded-lg max-h-fit my-2 max-w-[${width}px] md:my-0 p-3 duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
       <div className="flex-col">
         <div className="pb-2 flex flex-row justify-between">
           <p className="text-md">{title}</p>
@@ -79,8 +84,10 @@ export default function Card({ title, description, image_paths, type_to_link, ma
         </div>
         <hr className="border-1 -mx-3 border-primary-green" />
       </div>
+
+      {image_paths && <Image src={image_paths[0].image_path} width={800} height={100} alt={image_paths[0].image_alt} className="pt-4 object-cover"></Image>}
       
-      <div className="grid gap-2 pt-4 min-h-[200px] max-h-[600px]">
+      <div className="grid gap-2 pt-4 max-h-[600px]">
         {formatText(description)}
       </div>
       {
