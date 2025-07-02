@@ -2,8 +2,10 @@
 
 :root {
   --beige-light: #FFFBF6;
+  --beige-card: #f6f3f1;
   --blue: #8AE1F4;
   --pink: #EDC0C0;
+  --pink-light: #f3e0e0;
   --green-light: #AABCA3;
   --green-med: #57705B;
   --green-dark: #334036;
@@ -17,6 +19,7 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-secondary-background: var(--beige-card);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -25,6 +28,7 @@
   --color-tertiary-green: var(--green-dark);
   --color-text-primary: var(--green-med);
   --color-primary-pink: var(--pink);
+  --color-secondary-pink: var(--pink-light);
 
   --text-sm: 16px;
   --text-md: 24px;

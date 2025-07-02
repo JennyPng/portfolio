@@ -1,7 +1,12 @@
 export interface CardProps {
   title: string;
   description: string | string[];
-  dates?: string;
+  dates?: {
+    startMonth: number,
+    startYear: number,
+    endMonth?: number,
+    endYear?: number
+  };
   image_paths?: string[]; // show slideshow if multiple
   type_to_link?: {
     type: "github" | "website" | "blog" | "email";
@@ -46,11 +51,18 @@ const formatText = (text: string | string[]) => {
   });
 };
 
-export default function Card({ title, description, image_paths, type_to_link, buttons, footer, className }: CardProps) {
+export default function Card({ title, description, image_paths, type_to_link, buttons, footer, className, dates }: CardProps) {
+  const startDate = dates ? new Date(dates.startYear, dates.startMonth - 1).toDateString() : undefined 
+  const endDate = (dates?.endMonth && dates?.endYear) ? new Date(dates.endYear, dates.endMonth - 1).toDateString() : "present"
   return (
-    <div className={`card flex-col border-2 my-4 mx-4 border-primary-green bg-color-background rounded-lg p-3 w-[70vw] md:min-w-[25vw] md:max-w-[300px] lg:w-[450px] duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
+    <div className={`card flex-col border-2 border-primary-green bg-secondary-background rounded-lg p-3 w-[70vw] md:min-w-[25vw] md:max-w-[300px] lg:w-[450px] duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
       <div className="flex-col">
-        <p className="pb-2 text-md">{title}</p>
+        <div className="pb-2 flex flex-row justify-between">
+          <p className="text-md">{title}</p>
+          {dates &&           
+            <p className="text-sm text-primary-green pt-2 pr-2">{startDate != endDate ? `${startDate} - ${endDate}` : startDate}</p>
+          }
+        </div>
         <hr className="border-1 -mx-3 border-primary-green" />
       </div>
       
@@ -59,11 +71,11 @@ export default function Card({ title, description, image_paths, type_to_link, bu
       </div>
       {
         buttons && (
-          <div className="flex-row pb-4">
+          <div className="flex-row pb-4 pt-1">
             {
               buttons.map((button) => {
                 return(
-                  <a href={button.link} target="_blank" rel="noopener noreferrer"><button className="text-tertiary-green bg-primary-green justify min-w-fit p-2 mr-4 mt-2 flex-1 rounded-lg duration-170 hover:bg-secondary-green hover:text-background hover:cursor-pointer" key={button.text}>{button.text}</button></a>
+                  <a href={button.link} target="_blank" rel="noopener noreferrer" key={button.text}><button className="text-primary-green border-2 border-primary-green justify min-w-fit p-2 mr-4 mt-2 flex-1 rounded-lg pt-1 pb-1 duration-170 hover:bg-primary-green hover:text-secondary-green hover:cursor-pointer">{button.text}</button></a>
                 )
             })
             }
@@ -73,7 +85,7 @@ export default function Card({ title, description, image_paths, type_to_link, bu
       {footer && ( 
         <div className="card-footer"> 
           <hr className="border-1 -mx-3 border-primary-green" />
-          <p className="text-sm text-primary-green">{footer}</p>
+          <p className="text-sm text-primary-green pt-2">{footer}</p>
         </div>
       )}
     </div>

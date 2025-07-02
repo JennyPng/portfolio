@@ -6,7 +6,6 @@
       "Previously, I've worked @ *Amazon, GoodRx*; researched @ *UW Makeability Lab*; taught @ *Paul G. Allen School*.",
       "I currently enjoy full-stack engineering, game dev, new media. I will always enjoy dabbling in any form of creative self-expression."
     ],
-    "dates": "9/22",
     "image_paths": [],
     "type_to_link": [],
     "buttons": [
@@ -26,9 +25,13 @@
       {
         "title": "jam journal",
         "description": [
-          "For people that analyze lyrics, make ultra-specific playlists, or just want to document their thoughts on music!",
-          "Users can import songs and control playback via the YouTube API, take notes on specific songs, and add timestamped or lyric-specific annotations while listening in-app."
+          "Import songs and control playback via the YouTube API, take notes on specific songs, and add timestamped or lyric-specific annotations while listening in-app.",
+          "For people that analyze lyrics, make ultra-specific playlists, or just want to document their thoughts on music!"
         ],
+        "dates": {
+          "startMonth": 4,
+          "startYear": 2025
+        },
         "image_paths": [],
         "type_to_link": [],
         "buttons": [
@@ -46,6 +49,12 @@
           "Multiplayer AR racing game allowing players in the same room to compete on custom, environment-aware, procedurally-generated racetracks.",
           "Built for Virtual Reality Capstone course in a team of 4, using Meta Quest."
         ],
+        "dates": {
+          "startMonth": 4,
+          "startYear": 2025,
+          "endMonth": 6,
+          "endYear": 2025
+        },
         "image_paths": [],
         "type_to_link": [],
         "buttons": [
@@ -59,6 +68,12 @@
        },
       {
         "title": "AR Student Emotion Analyzer",
+        "dates": {
+            "startMonth": 3,
+            "startYear": 2025,
+            "endMonth": 3,
+            "endYear": 2025
+        },
         "description": [
           "for anyone"
         ],
