@@ -11,7 +11,7 @@
     "buttons": [
       {
         "text": "about",
-        "link": ""
+        "link": "/about-me"
       },
       {
         "text": "resume",
@@ -60,7 +60,7 @@
         "buttons": [
           {
             "text": "demo",
-            "link": ""
+            "link": "https://www.youtube.com/watch?v=j0EMnODYyE0"
           }
         ],
         "footer": "c#, unity, photon fusion",
@@ -82,11 +82,11 @@
         "buttons": [
           {
             "text": "github",
-            "link": ""
+            "link": "https://github.com/JennyPng/AR-student-emotion-analyzer"
           },
           {
             "text": "paper",
-            "link": ""
+            "link": "https://github.com/JennyPng/AR-student-emotion-analyzer/blob/main/VRFinalProject.pdf"
           }
         ],
         "footer": "python, c#, tensorflow, unity, YOLO, pandas, openAI",
@@ -95,7 +95,8 @@
       {
         "title": "crown of persuasion",
         "description": [
-          "for anyone"
+          "Visual novel / 2D platformer where you are a sentient crown that grants your wearer immense persuasive ability, and is responsible for choosing a new village leader.",
+          "Implemented dialogue system from scratch, animated player characters, and wrote story. Built in 3 weeks for Pirate Game Jam, with theme \"you are the weapon.\""
         ],
         "dates": {
             "startMonth": 1,
@@ -108,7 +109,7 @@
         "buttons": [
           {
             "text": "itch.io",
-            "link": ""
+            "link": "https://aki-bread.itch.io/crown-of-persuasion"
           }
         ],
         "footer": "c#, unity, clip studio paint",

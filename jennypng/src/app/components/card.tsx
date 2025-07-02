@@ -7,6 +7,7 @@ export interface CardProps {
     endMonth?: number,
     endYear?: number
   };
+  maxWidth?: number,
   image_paths?: string[]; // show slideshow if multiple
   type_to_link?: {
     type: "github" | "website" | "blog" | "email";
@@ -51,7 +52,7 @@ const formatText = (text: string | string[]) => {
   });
 };
 
-export default function Card({ title, description, image_paths, type_to_link, buttons, footer, className, dates }: CardProps) {
+export default function Card({ title, description, image_paths, type_to_link, maxWidth, buttons, footer, className, dates }: CardProps) {
   const startDate = dates ? new Date(dates.startYear, dates.startMonth - 1) : undefined;
   const endDate = (dates?.endMonth && dates?.endYear)
     ? new Date(dates.endYear, dates.endMonth - 1)
@@ -64,8 +65,11 @@ export default function Card({ title, description, image_paths, type_to_link, bu
   const formattedEndDate =
     endDate === "present" ? endDate : formatDate(endDate as Date);
 
+  const width = maxWidth ? maxWidth : 500
+  console.log(width)
+
   return (
-    <div className={`card flex-col border-2 border-primary-green bg-secondary-background rounded-lg my-2 md:my-0 p-3 w-[80vw] md:min-w-[25vw] md:max-w-[300px] lg:w-[450px] duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
+    <div className={`card flex-col border-2 border-primary-green bg-secondary-background rounded-lg my-2 max-w-[${width}px] md:my-0 p-3 duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
       <div className="flex-col">
         <div className="pb-2 flex flex-row justify-between">
           <p className="text-md">{title}</p>

@@ -23,16 +23,28 @@ export default function Projects({className} : {className?: string}) {
                     return <button onClick={(e) => setProjectFilter(tag)} key={tag} className="p-2 mx-4 ml-0 hover:bg-secondary-pink hover:cursor-pointer hover:text-tertiary-green duration-170">{tag}</button>
                 })}
             </div>
-            <div className="projects-cards grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
-            {
-                projects.filter((project) => {
-                    if (projectFilter == "all") return project
-                    if (project.tags?.includes(projectFilter)) return project
-                }).map((project) => {
-                    return <Card key={project.title} className="" {...project}></Card>
-                })
+            {(projectFilter == "featured") ?
+                <div className={"projects-cards grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-8"}>
+                {
+                    projects.filter((project) => {
+                        if (project.tags?.includes(projectFilter)) return project
+                    }).map((project) => {
+                        return <Card key={project.title} {...project}></Card>
+                    })
+                }
+                </div>
+                :
+                <div className={"projects-cards grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-8 lg:grid-cols-3"}>
+                {
+                    projects.filter((project) => {
+                        if (projectFilter == "all") return project
+                        if (project.tags?.includes(projectFilter)) return project
+                    }).map((project) => {
+                        return <Card key={project.title} {...project}></Card>
+                    })
+                }
+                </div>
             }
-            </div>
         </div>
     )
 }
