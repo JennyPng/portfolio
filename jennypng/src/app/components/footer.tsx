@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 
-const words = ["$2 heytea in china 🧋", "a love of documenting progress 📝", "obsidian dev logging 💜", "a post-grad sense of free will 😇", "my favorite shade of green 🌱", "inspiration from many cool artists in tech 🎨"]
+const words = ["$2 heytea in china 🧋", "a love of documenting process 📝", "obsidian dev logging 💜", "a post-grad sense of free will 😇", "my favorite shade of green 🌱", "inspiration from other artists in tech 🎨"]
 
 export default function Footer() {
     const [wordIdx, setWordIdx] = useState(0)
