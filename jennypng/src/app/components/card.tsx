@@ -119,7 +119,7 @@ export default function Card({ title, description, image_paths, type_to_link, ma
         <hr className="border-1 -mx-3 border-primary-green" />
       </div>
 
-      {image_paths && <Image src={image_paths[0].image_path} width={800} height={300} alt={image_paths[0].image_alt} className="pt-4"></Image>}
+      {image_paths && <Image src={image_paths[0].image_path} width={800} height={300} alt={image_paths[0].image_alt} className="pt-4 object-contain max-h-[350px]"></Image>}
       
       <div className="grid gap-2 pt-4 max-h-[600px]">
         {formatText(description)}
