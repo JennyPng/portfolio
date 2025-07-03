@@ -164,7 +164,7 @@
       {
         "title": "distributed key-value store",
         "description": [
-          "Implemented a linearizable, sharded key-value store with multi-key updates and dynamic load balancing for CSE452. Used Paxos algorithm."
+          "Implemented a linearizable, sharded key-value store with multi-key updates and dynamic load balancing for [CSE452](https://courses.cs.washington.edu/courses/cse452/)."
         ],
         "dates": {
             "startMonth": 3,
@@ -173,14 +173,6 @@
             "endYear": 2024
         },
         "footer": "java",
-        "tags": ["course"]
-       },
-        {
-        "title": "operating system",
-        "description": [
-          "for anyone"
-        ],
-        "footer": "C",
         "tags": ["course"]
        },
       {
@@ -208,6 +200,20 @@
         "footer": "python, reflex, gpt",
         "tags": ["hackathon"]
        }, 
+        {
+        "title": "operating system",
+        "description": [
+          "Implemented an operating system with multi-processing syscalls, inter-process communication with pipe, exec, user-level heap and shell, and crash-safe concurrent file system functionality for [CSE451](https://courses.cs.washington.edu/courses/cse451/)"
+        ],
+        "dates": {
+            "startMonth": 9,
+            "startYear": 2023,
+            "endMonth": 12,
+            "endYear": 2023
+        },
+        "footer": "C",
+        "tags": ["course"]
+       },
       {
         "title": "nobull",
         "description": [

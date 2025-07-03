@@ -31,7 +31,7 @@ export interface CardProps {
 const formatText = (text: string | string[]) => {
   const lines = Array.isArray(text) ? text : text.split('\n');
 
-  // Helper: parse bold + italic in a string fragment
+  // parse bold + italic in a string fragment
   const parseFormatting = (input: string, keyPrefix: string) => {
     const boldParts = input.split(/(\*\*.*?\*\*)/g).map((part, i) => {
       if (part.startsWith('**') && part.endsWith('**')) {
@@ -121,12 +121,12 @@ export default function Card({ title, description, image_paths, type_to_link, ma
 
       {image_paths && <Image src={image_paths[0].image_path} width={800} height={300} alt={image_paths[0].image_alt} className="pt-4 object-contain max-h-[350px]"></Image>}
       
-      <div className="grid gap-2 pt-4 max-h-[600px]">
+      <div className="grid gap-2 pt-4 pb-2 max-h-[600px]">
         {formatText(description)}
       </div>
       {
         buttons && (
-          <div className="flex-row pb-4 pt-1">
+          <div className="flex-row pb-4">
             {
               buttons.map((button) => {
                 return(
