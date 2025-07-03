@@ -1,4 +1,5 @@
 import { getAllPosts } from '../../../lib/posts';
+import Card from '../components/card';
 
 function getPosts() {
   const allPosts = getAllPosts();
@@ -13,7 +14,21 @@ export default function Blog() {
     const allPostsData = getPosts()
   return (
     <div className="items-center justify-center min-h-screen p-4 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-    <ul>
+    {
+        allPostsData.map(({slug, date, title, excerpt}) => {
+            const cardProps = {
+                title: title,
+                description: excerpt,
+            }
+
+            return (
+            <a href={`/blog/${slug}`} key={slug}><Card {...cardProps} className="hover:cursor-pointer">
+
+            </Card></a>)
+        })
+    }
+
+    {/* <ul>
       {allPostsData.map(({ slug, date, title }) => (
         <li key={slug}>
           {title}
@@ -21,9 +36,10 @@ export default function Blog() {
           {slug}
           <br />
           {date}
+          {content}
         </li>
       ))}
-    </ul>
+    </ul> */}
     </div>
   );
 }

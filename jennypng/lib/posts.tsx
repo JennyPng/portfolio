@@ -3,6 +3,10 @@ import matter from 'gray-matter';
 import { join } from 'path';
 import { remark } from "remark";
 import html from "remark-html";
+import rehypeExternalLinks from 'rehype-external-links'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeStringify from 'rehype-stringify'
 
 export type Post = {
   slug: string;
@@ -39,6 +43,16 @@ export function getAllPosts(): Post[] {
 }
 
 export async function markdownToHtml(markdown: string) {
-  const result = await remark().use(html).process(markdown);
-  return result.toString();
+  const result = await remark()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeExternalLinks, {
+      target: '_blank',
+      rel: ['noopener', 'noreferrer'],
+    })
+    .use(rehypeStringify)
+    .process(markdown)
+
+  return result.toString()
 }
+

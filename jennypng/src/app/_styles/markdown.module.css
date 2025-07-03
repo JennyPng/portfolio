@@ -1,17 +1,21 @@
-.markdown {
+@reference "../globals.css";
+
+.markdown * {
   /* General styling */
-  font-size: 1rem;
+  font-size: 1.10rem;
   line-height: 1.75;
-  color: #1a1a1a;
+  color: var(--green-med);
 }
 
 /* Headings */
-.markdown h1 { font-size: 2.25rem; margin: 1.5rem 0; font-weight: bold; }
-.markdown h2 { font-size: 1.75rem; margin: 1.25rem 0; font-weight: semibold; }
-.markdown h3 { font-size: 1.5rem; margin: 1rem 0; font-weight: semibold; }
+.markdown h1 { color: var(--green-dark); font-size: 2.0rem; margin: 1.5rem 0; font-weight: bold; }
+.markdown h2 { color: var(--green-dark); font-size: 1.75rem; margin: 1.25rem 0; font-weight: semibold; }
+.markdown h3 { color: var(--green-dark); font-size: 1.5rem; margin: 1rem 0; font-weight: semibold; }
 
 /* Paragraphs */
-.markdown p { margin: 1rem 0; }
+.markdown p { 
+  margin: 1.5rem 0; 
+}
 
 /* Lists */
 .markdown ul { list-style-type: disc; margin-left: 1.5rem; }
@@ -19,11 +23,12 @@
 
 /* Links */
 .markdown a {
-  color: var(--primary-color);
+  color: var(--green-med);
+  background-color: var(--blue);
   text-decoration: none;
 }
 .markdown a:hover {
-  text-decoration: underline;
+  background-color: var(--blue-dark);
 }
 
 /* Code */
@@ -36,9 +41,8 @@
 
 /* Blockquotes */
 .markdown blockquote {
-  border-left: 4px solid #ccc;
+  border-left: 4px solid var(--pink-light);
   padding-left: 1rem;
-  color: #666;
   margin: 1rem 0;
 }
 

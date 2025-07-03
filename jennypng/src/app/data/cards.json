@@ -47,6 +47,24 @@
         "tags": ["featured", "web"]
        },
       {
+        "title": "portfolio website",
+        "description": [
+          "this website!"
+        ],
+        "dates": {
+          "startMonth": 6, 
+          "startYear": 2025
+        },
+        "buttons": [
+          {
+            "text": "blog post",
+            "link": "/blog/portfolio-revamp"
+          }
+        ],
+        "footer": "typescript, next.js, tailwind css, motion js",
+        "tags": ["web"]
+       },
+      {
         "title": "AR RC car racing 🏎️",
         "description": [
           "Multiplayer AR racing game allowing players in the same room to compete on custom, **environment-aware, procedurally-generated racetracks.**",
