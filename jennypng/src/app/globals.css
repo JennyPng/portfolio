@@ -60,3 +60,13 @@ h1 {
   margin-bottom: 1rem;
   letter-spacing: -0.025em;
 }
+
+/* Squiggle SVG animation */
+.squiggle-path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  transition: stroke-dashoffset 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+.squiggle-animate {
+  stroke-dashoffset: 0;
+}

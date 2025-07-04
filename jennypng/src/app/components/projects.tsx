@@ -4,7 +4,7 @@ import cardsData from "../data/cards.json";
 import { CardProps } from "./card";
 import { useState } from "react";
 
-const CardTags = ["featured", "all", "ar/vr", "web", "ai/ml", "game", "hackathon", "course" , "research" , "design"]
+const CardTags = ["featured", "all", "ar/vr", "web", "ai/ml", "game", "systems", "hackathon", "course" , "research"]
 
 const projects : CardProps[] = cardsData.projects
 
@@ -13,7 +13,7 @@ export default function Projects({className} : {className?: string}) {
     const [projectFilter, setProjectFilter] = useState("featured")
 
     return(
-        <div className={`projects ${className}`}>
+        <div className={`${className}`} id="projects" scroll-mt="15px">
             <p className="text-4xl font-semibold align-middle text-secondary-green mb-4">projects</p>
             <div className="projects-filter flex flex-wrap pb-4">
                 {CardTags.map((tag) => {

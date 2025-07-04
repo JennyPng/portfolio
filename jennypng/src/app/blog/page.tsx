@@ -1,4 +1,5 @@
 import { getAllPosts } from '../../../lib/posts';
+import BlogPostCard from '../components/blog-post';
 import Card from '../components/card';
 
 function getPosts() {
@@ -14,32 +15,22 @@ export default function Blog() {
     const allPostsData = getPosts()
   return (
     <div className="items-center justify-center min-h-screen p-4 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-    {
-        allPostsData.map(({slug, date, title, excerpt}) => {
-            const cardProps = {
-                title: title,
-                description: excerpt,
+        <h1>blog</h1>
+        <div className="grid grid-cols-1 md:grid-cols-4">
+            {
+                // TODO new component instead of card
+                allPostsData.map(({slug, date, title, excerpt}) => {
+                    const cardProps = {
+                        title: title,
+                        description: excerpt,
+                    }
+
+                    return (
+                    <a href={`/blog/${slug}`} key={slug}><BlogPostCard {...cardProps}/>
+                    </a>)
+                })
             }
-
-            return (
-            <a href={`/blog/${slug}`} key={slug}><Card {...cardProps} className="hover:cursor-pointer">
-
-            </Card></a>)
-        })
-    }
-
-    {/* <ul>
-      {allPostsData.map(({ slug, date, title }) => (
-        <li key={slug}>
-          {title}
-          <br />
-          {slug}
-          <br />
-          {date}
-          {content}
-        </li>
-      ))}
-    </ul> */}
+        </div>
     </div>
   );
 }

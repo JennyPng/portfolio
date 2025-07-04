@@ -203,7 +203,7 @@
             "endYear": 2024
         },
         "footer": "java",
-        "tags": ["course"]
+        "tags": ["course", "systems"]
        },
       {
         "title": "shameify",
@@ -242,7 +242,7 @@
             "endYear": 2023
         },
         "footer": "C",
-        "tags": ["course"]
+        "tags": ["course", "systems"]
        },
       {
         "title": "nobull",

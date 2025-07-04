@@ -48,7 +48,8 @@
 
 /* Images */
 .markdown img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
+  justify-self: center;
   margin: 1rem 0;
 }
