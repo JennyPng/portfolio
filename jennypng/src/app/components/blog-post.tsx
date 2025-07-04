@@ -9,10 +9,12 @@ interface BlogPostProps {
 
 export default function BlogPostCard({ title, date, description, image } : BlogPostProps ) {
     return(
-        <div className="relative w-[400px] h-[400px] transition-transform duration-175 hover:scale-105 brightness-107">
+        <div className="relative w-[500px] h-[500px] transition-transform duration-175 hover:scale-105 brightness-107">
             <Image src="/images/notebook.png" fill alt="notebook image" className="object-cover"/>
-            <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-md max-w-[150px] top-0">{title}</p>
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+                {image && <Image src={image} width={220} height={220} alt="blog image" className="ml-2"></Image>}
+                <p className="text-md max-w-[220px] font-bold">{title}</p>
+                {date && <p className="text-sm max-w-[220px]">{new Date(date).toDateString()}</p>}
             </div>
         </div>
     )

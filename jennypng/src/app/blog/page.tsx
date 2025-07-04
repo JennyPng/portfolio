@@ -19,12 +19,13 @@ export default function Blog() {
         <div className="grid grid-cols-1 md:grid-cols-4">
             {
                 // TODO new component instead of card
-                allPostsData.map(({slug, date, title, excerpt}) => {
+                allPostsData.map(({slug, date, title, excerpt, coverImage}) => {
                     const cardProps = {
                         title: title,
                         description: excerpt,
+                        date: date,
+                        image: coverImage,
                     }
-
                     return (
                     <a href={`/blog/${slug}`} key={slug}><BlogPostCard {...cardProps}/>
                     </a>)

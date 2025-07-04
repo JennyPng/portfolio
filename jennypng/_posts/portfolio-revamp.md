@@ -1,8 +1,6 @@
 ---
-title: "Portfolio Dev Log (wip)"
-year: 2025
-month: 7
-day: 4
+title: "Portfolio Dev Log"
+date: "2025-07-4"
 excerpt: "Documenting the thought process and learnings behind creating my current portfolio website, aka what you're looking at right now"
 ---
 
@@ -27,6 +25,10 @@ but not enough to comfortably describe my skill level as intermediate. That proj
 6 week build space - I wanted to use this portfolio revamp, something with no real deadline, as a chance to go slowly and really strengthen
 my foundational knowledge.
 
+## process
+I made a Figma mockup again.
+
+
 ## challenges
 - **Project gallery**: 
     - I struggled a little with how to layout the project cards. I discovered that what I needed was a masonry layout. I attempted to use CSS grid,
@@ -39,7 +41,14 @@ as I read this was good for 2D layouts over flex, but it was a bit rigid - cards
 - **Playful design**: how to balance play and work - a formal portfolio with room for whimsy?
 
 ## learnings
+(literally anything new i learned that i think is worth remembering)
+
 - anything with repeated styling should have data stored in some structure and map to a generic component (i did this for projects and blog posts, but didn't think initially to do it for nav bar links too - needed to refactor this to apply a fancier svg animation to all nav links)
+- public/images 
+- useful css properties used: 
+    - inset-0
+    - col
+- flex for 1D, grid for 2D
 
 
 ### css

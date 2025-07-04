@@ -1,6 +1,7 @@
 ---
-title: "AR RC Car Racing Dev Log (wip)"
+title: "AR RC Car Racing"
 date: "2025-07-03"
+coverImage: "/images/arc-gif.gif"
 excerpt: "Learnings from developing my first serious AR application over 8 weeks in a team of 4"
 ---
 
