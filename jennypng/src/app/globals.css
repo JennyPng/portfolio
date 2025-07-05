@@ -5,6 +5,7 @@
   --beige-card: #f6f3f1;
   --blue: #cee9f3;
   --blue-dark: #84cdda;
+  --gradient-blue: #8AE1F4;
   --pink: #EDC0C0;
   --pink-light: #f3e0e0;
   --green-light: #AABCA3;
@@ -35,6 +36,7 @@
   --color-teal: var(--blue);
   --color-teal-dark: var(--blue-dark);
 
+  --text-xs: 14px;
   --text-sm: 18px;
   --text-md: 22px;
   --text-lg: 32px;
@@ -69,4 +71,22 @@ h1 {
 }
 .squiggle-animate {
   stroke-dashoffset: 0;
+}
+
+
+
+/* Custom jiggle animation for Tailwind */
+@keyframes jiggle {
+  0% {
+    transform: rotate(0deg) scale(1.05);
+  }
+  25% {
+    transform: rotate(-1deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(1deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.05);
+  }
 }

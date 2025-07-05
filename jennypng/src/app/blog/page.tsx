@@ -14,7 +14,9 @@ function getPosts() {
 export default function Blog() {
     const allPostsData = getPosts()
   return (
-    <div className="items-center justify-center min-h-screen p-4 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div 
+      className="items-center justify-center min-h-screen p-4 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]"
+    >
         <h1>blog</h1>
         <div className="grid grid-cols-1 md:grid-cols-4">
             {
