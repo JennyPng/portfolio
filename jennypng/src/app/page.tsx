@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Intro from "./components/intro";
 import Projects from "./components/projects";
+import Experience from "./components/experience";
 import AnimatedBlobsBackground from "./components/animated-blobs";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <AnimatedBlobsBackground />
       <Intro className="inline-block ml-4 md:ml-[30vw]" />
       <Projects className="mt-[15vh] ml-4"/>
+      <Experience className="mt-[15vh] ml-4"/>
     </div>
   );
 }

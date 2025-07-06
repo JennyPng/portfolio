@@ -11,11 +11,13 @@
     "buttons": [
       {
         "text": "about",
-        "link": "/about-me"
+        "link": "/about-me",
+        "internal": true
       },
       {
         "text": "resume",
-        "link": ""
+        "link": "/#experience",
+        "internal": true
       }
     ],
     "footer": "",
@@ -58,7 +60,8 @@
         "buttons": [
           {
             "text": "blog post",
-            "link": "/blog/portfolio-revamp"
+            "link": "/blog/portfolio-revamp",
+            "internal": true
           }
         ],
         "footer": "typescript, next.js, tailwind css, motion js",
@@ -322,5 +325,75 @@
         "footer": "react, figma",
         "tags": ["web", "hackathon"]
        }
+    ],
+    "experience": [
+      {
+        "title": "Research Assistant @ [UW Makeability Lab](https://makeabilitylab.cs.washington.edu/)",
+        "description": [
+          "Developing a novel LLM pipeline for personalization in AR for deaf and hard-of-hearing users"
+        ],
+        "dates": {
+          "startMonth": 10,
+          "startYear": 2024
+        },
+        "footer": "c#, unity, gpt, prompt engineering"
+      },
+      {
+        "title": "Junior Software Developer @ Amazon",
+        "description": [
+          "• Implemented a new UI feature that leverages generative AI to give associates in book manufacturing sites increased visibility into known technical issues.",
+          "• Migrated a printer configuration feature by updating GraphQL schema, a Golang microservice, backend Typescript service, Java client, and React frontend.",
+          "• Enhanced clarity of web pages used by 300+ associates across 5 book manufacturing sites; wrote unit tests in React and Typescript, and communicated requirements with the PM, UX designer, and QA testing team.",
+          "• Eliminated 100,000 corrupt manufacturing requests in production by writing and executing a Python script for backfill.",
+          "• Provided crucial insights for a dashboard redesign by disambiguating legacy Java code and complex SQL queries."
+        ],
+        "dates": {
+          "startMonth": 9,
+          "startYear": 2023,
+          "endMonth": 12,
+          "endYear": 2024
+        },
+        "footer": "java, golang, aws, react, typescript, graphql, python, sql, dynamodb"
+      },
+      {
+        "title": "Software Engineer Intern @ GoodRx",
+        "description": [
+          "• Increased efficiency of incident investigation across all teams in the company by planning and implementing ownership attribution across GraphQL domains, creating custom metrics, and increasing granularity of Datadog monitoring to alert teams for issues actually relevant to them.",
+          "• Designed new GraphQL schema and implemented query resolvers and API clients in TypeScript; added features that enable frontend clients to easily fetch a user’s location information to surface relevant search results, and also fetch retail pharmacy details."
+        ],
+        "dates": {
+          "startMonth": 6,
+          "startYear": 2023,
+          "endMonth": 9,
+          "endYear": 2023
+        },
+        "footer": "typescript, graphql, datadog, jest"
+      },
+      {
+        "title": "Teaching Assistant @ [Paul G. Allen School](https://courses.cs.washington.edu/courses/cse351/)",
+        "description": [
+          "• Taught 30 students in a weekly review section. Held weekly office hours to answer individual student questions and assisted in debugging labs about buffer overflow exploits, cache policies, and dynamic memory allocation.",
+          "• Revised and wrote course materials for 150+ students; topics include introducing C, x86-64 assembly, number representation, memory management, basic computer architecture, and working in a Linux environment."
+        ],
+        "dates": {
+          "startMonth": 9,
+          "startYear": 2022,
+          "endMonth": 6,
+          "endYear": 2023
+        },
+        "footer": "C, x86-64 assembly, linux, teaching"
+      },
+      {
+        "title": "University of Washington",
+        "description": [
+          "B.S. in Computer Science and Engineering, GPA: 3.81"
+        ],
+        "dates": {
+          "startMonth": 9,
+          "startYear": 2021,
+          "endMonth": 6,
+          "endYear": 2025
+        }
+      }
     ]
 } 

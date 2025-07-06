@@ -21,6 +21,7 @@ export interface CardProps {
   buttons?: {
     text: string;
     link: string;
+    internal?: boolean;
   }[]
   footer?: string;
   className?: string;
@@ -28,7 +29,7 @@ export interface CardProps {
   drag?: boolean
 }
 
-const formatText = (text: string | string[]) => {
+const formatText = (text: string | string[], size: "md" | "sm") => {
   const lines = Array.isArray(text) ? text : text.split('\n');
 
   // parse bold + italic in a string fragment
@@ -86,7 +87,7 @@ const formatText = (text: string | string[]) => {
       );
     });
 
-    return <p key={lineIndex} className="text-sm">{segments}</p>;
+    return <p key={lineIndex} className={`text-${size}`}>{segments}</p>;
   });
 };
 
@@ -110,7 +111,7 @@ export default function Card({ title, description, image_paths, type_to_link, ma
     <div className={`card flex-col border-2 border-primary-green bg-secondary-background rounded-lg max-h-fit my-2 max-w-[${width}px] md:my-0 p-3 duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
       <div className="flex-col">
         <div className="pb-2 flex flex-row justify-between">
-          <p className="text-md">{title}</p>
+          {formatText(title, "md")}
           {dates &&           
             <p className="text-sm text-primary-green pt-1 pr-2">{formattedStartDate != formattedEndDate ? `${formattedStartDate} - ${formattedEndDate}` : formattedStartDate}</p>
           }
@@ -121,7 +122,7 @@ export default function Card({ title, description, image_paths, type_to_link, ma
       {image_paths && <Image src={image_paths[0].image_path} width={800} height={300} alt={image_paths[0].image_alt} className="pt-4 object-contain max-h-[350px]"></Image>}
       
       <div className="grid gap-2 pt-4 pb-2 max-h-[600px]">
-        {formatText(description)}
+        {formatText(description, "sm")}
       </div>
       {
         buttons && (
@@ -129,7 +130,7 @@ export default function Card({ title, description, image_paths, type_to_link, ma
             {
               buttons.map((button) => {
                 return(
-                  <a href={button.link} target="_blank" rel="noopener noreferrer" key={button.text}><button className="text-primary-green border-2 border-primary-green justify min-w-fit p-2 mr-4 mt-2 flex-1 rounded-lg pt-1 pb-1 duration-170 hover:bg-primary-green hover:text-secondary-green hover:cursor-pointer">{button.text}</button></a>
+                  <a href={button.link} target={button.internal ? "_self" : "_blank"} rel="noopener noreferrer" key={button.text}><button className="text-primary-green border-2 border-primary-green justify min-w-fit p-2 mr-4 mt-2 flex-1 rounded-lg pt-1 pb-1 duration-170 hover:bg-primary-green hover:text-secondary-green hover:cursor-pointer">{button.text}</button></a>
                 )
             })
             }

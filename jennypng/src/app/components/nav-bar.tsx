@@ -1,11 +1,13 @@
 "use client"
 import Link from "next/link";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const navLinks = [
   { href: "/#projects", label: "projects" },
+  { href: "/#experience", label: "experience" },
   { href: "/about-me", label: "about" },
-  { href: "/blog", label: "blog" },
+  // { href: "/blog", label: "blog" },
   // { href: "/art", label: "art" },
   { href: "https://jennypng.netlify.app/", label: "🌱", external: true },
 ];
@@ -51,30 +53,44 @@ export default function NavBar() {
                   {link.label}
                 </Link>
               )}
-              <svg
+              <motion.svg
                 width="48"
-                height="8"
-                viewBox="0 0 48 8"
+                height="12"
+                viewBox="0 0 48 12"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 style={{
                   position: "absolute",
                   left: 0,
                   right: 0,
-                  bottom: -2,
+                  bottom: -4,
                   width: "100%",
-                  height: 8,
+                  height: 12,
                   pointerEvents: "none"
                 }}
+                initial={{ pathLength: 0, opacity: 0 }}
+                animate={{ 
+                  pathLength: hovered === idx ? 1 : 0,
+                  opacity: hovered === idx ? 1 : 0
+                }}
+                transition={{ 
+                  duration: 0.3,
+                  ease: "easeInOut"
+                }}
               >
-                <path
-                  className={`squiggle-path${hovered === idx ? " squiggle-animate" : ""}`}
-                  d="M2 6 Q12 2 24 6 Q36 10 46 6"
+                <motion.path
+                  d="M2 9 Q6 3 12 7 Q18 1 24 9 Q30 2 36 8 Q42 1 46 7"
                   stroke="var(--color-primary-pink)"
                   strokeWidth="2"
                   fill="none"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: hovered === idx ? 1 : 0 }}
+                  transition={{ 
+                    duration: 0.3,
+                    ease: "easeInOut"
+                  }}
                 />
-              </svg>
+              </motion.svg>
             </div>
           ))}
         </nav>
@@ -85,34 +101,69 @@ export default function NavBar() {
           onClick={toggleMenu}
           aria-label="Toggle navigation menu"
         >
-          <span 
-            className={`block w-6 h-0.5 bg-secondary-green transition-all duration-300 ${
-              isMenuOpen ? 'rotate-45 translate-y-2' : ''
-            }`}
-          ></span>
-          <span 
-            className={`block w-6 h-0.5 bg-secondary-green transition-all duration-300 ${
-              isMenuOpen ? 'opacity-0' : ''
-            }`}
-          ></span>
-          <span 
-            className={`block w-6 h-0.5 bg-secondary-green transition-all duration-300 ${
-              isMenuOpen ? '-rotate-45 -translate-y-2' : ''
-            }`}
-          ></span>
+          <motion.span 
+            className="block w-6 h-0.5 bg-secondary-green"
+            animate={{
+              rotate: isMenuOpen ? 45 : 0,
+              y: isMenuOpen ? 8 : 0
+            }}
+            transition={{ duration: 0.3 }}
+          ></motion.span>
+          <motion.span 
+            className="block w-6 h-0.5 bg-secondary-green"
+            animate={{
+              opacity: isMenuOpen ? 0 : 1
+            }}
+            transition={{ duration: 0.3 }}
+          ></motion.span>
+          <motion.span 
+            className="block w-6 h-0.5 bg-secondary-green"
+            animate={{
+              rotate: isMenuOpen ? -45 : 0,
+              y: isMenuOpen ? -8 : 0
+            }}
+            transition={{ duration: 0.3 }}
+          ></motion.span>
         </button>
       </div>
 
       {/* Mobile Navigation Menu */}
-      <div 
-        className={`md:hidden fixed inset-0 z-50 bg-background/95 backdrop-blur-sm transition-all duration-300 ${
-          isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}
+      <motion.div 
+        className="md:hidden fixed inset-0 z-50 bg-background/95 backdrop-blur-sm"
+        initial={{ opacity: 0, visibility: "hidden" }}
+        animate={{ 
+          opacity: isMenuOpen ? 1 : 0,
+          visibility: isMenuOpen ? "visible" : "hidden"
+        }}
+        transition={{ duration: 0.3 }}
         onClick={closeMenu}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-8">
+        <motion.div 
+          className="flex flex-col items-center justify-center h-full space-y-8"
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ 
+            y: isMenuOpen ? 0 : 20,
+            opacity: isMenuOpen ? 1 : 0
+          }}
+          transition={{ 
+            duration: 0.3,
+            delay: 0.1
+          }}
+        >
           {navLinks.map((link, idx) => (
-            <div key={link.href} className="relative">
+            <motion.div 
+              key={link.href} 
+              className="relative"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ 
+                y: isMenuOpen ? 0 : 20,
+                opacity: isMenuOpen ? 1 : 0
+              }}
+              transition={{ 
+                duration: 0.3,
+                delay: 0.1 + (idx * 0.1)
+              }}
+            >
               {link.external ? (
                 <a
                   href={link.href}
@@ -132,25 +183,31 @@ export default function NavBar() {
                   {link.label}
                 </Link>
               )}
-              <svg
+              <motion.svg
                 width="80"
-                height="12"
-                viewBox="0 0 80 12"
+                height="16"
+                viewBox="0 0 80 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 hover:opacity-100 transition-opacity duration-200"
+                className="absolute -bottom-3 left-1/2 transform -translate-x-1/2"
+                whileHover={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
               >
-                <path
-                  d="M4 9 Q20 3 40 9 Q60 15 76 9"
+                <motion.path
+                  d="M4 13 Q10 5 18 11 Q26 3 34 13 Q42 4 50 10 Q58 2 66 12 Q74 5 76 9"
                   stroke="var(--color-primary-pink)"
                   strokeWidth="2"
                   fill="none"
+                  initial={{ pathLength: 0 }}
+                  whileHover={{ pathLength: 1 }}
+                  transition={{ duration: 0.3 }}
                 />
-              </svg>
-            </div>
+              </motion.svg>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       <hr className="border-1 -mx-3 border-primary-green" />
     </div>

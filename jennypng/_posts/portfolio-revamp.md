@@ -6,6 +6,8 @@ excerpt: "Documenting the thought process and learnings behind creating my curre
 
 > Documenting the thought process and learnings behind creating my current portfolio website, aka what you're looking at right now
 
+(work in progress)
+
 ## goals
 I made my first portfolio website over winter break of freshman year (undergrad) to buff up my barren resume for an application to a robotics club.
 
@@ -32,8 +34,10 @@ Exploring what really feels like *me*, my identity and how I want to present mys
 - The project gallery mostly redesigned, and I tackled this next - the challenge here was with how to layout the project cards nicely
 - I filled in my project details, refined the css on the home page
 - I then added blog functionality, referencing friends' repos and random medium articles - I wanted something simple and lightweight, so no backend or cms
-- After the basic blog functionality existed, I decided to switch to adding playful visual elements, which I soon discovered would be the hardest part of this whole revamp as I had little experience
+- After the basic blog functionality existed, I decided to switch to adding playful visual elements, which I soon discovered would be the hardest part of this whole revamp as I had little experience...
 - Spent way too long looking for fonts
+- Started vibe coding visual elements with Cursor - moving blob, polaroid hover jiggle, polaroid scroll spread, and project gallery fade in
+- Reviewed the code to actually understand how to implement those things
 
 ## challenges
 - **Project gallery**: 
