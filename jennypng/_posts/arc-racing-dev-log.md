@@ -12,7 +12,7 @@ excerpt: "Learnings from developing my first serious AR application over 8 weeks
 ## challenges
 
 - Struggled with thinking of a capstone project idea - they expected something novel and technically complex in some way
-    - we found it difficult to be original in the ar/vr space while
+    - we found it difficult to be original in the ar/vr space
     - the idea also needed to be feasible to implement an MVP in 8 weeks...
 - After we decided the idea, there were so many unknowns as none of us had experience with procedural generation
 
