@@ -15,7 +15,7 @@ export default function NavBar() {
 
   return (
     <div className="nav">
-      <div className="flex text-secondary-green duration-175 justify-between items-center p-4 md:mx-24">
+      <div className="flex flex-wrap text-secondary-green duration-175 justify-between items-center p-4 md:mx-24">
         <Link href="/" className="text-sm">jenny peng</Link>
         <nav className="flex flex-wrap justify-between items-center p-4 pb-0 mb-0">
           {navLinks.map((link, idx) => (

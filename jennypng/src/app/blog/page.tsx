@@ -17,7 +17,7 @@ export default function Blog() {
     <div 
       className="items-center justify-center min-h-screen p-4 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]"
     >
-        <h1>blog</h1>
+        <h1 className="text-2xl font-caveat font-[700]">blog</h1>
         <div className="grid grid-cols-1 md:grid-cols-4">
             {
                 // TODO new component instead of card

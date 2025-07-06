@@ -1,19 +1,20 @@
 import Polaroid from "../components/polaroid"
 import Image from "next/image"
+import Link from "next/link"
 
-function ImageTrigger({ text, imageSrc, altText } : { text: string, imageSrc: string, altText: string }) {
+function ImageTrigger({ text, imageSrc, altText, href } : { text: string, imageSrc: string, altText: string, href: string }) {
     return (
         <span className="relative inline-block group">
-            <span className="border-b-2 border-dotted border-gray-400 hover:border-gray-600 transition-colors duration-200 cursor-pointer">
+            <Link href={href} className="border-b-2 border-dotted border-gray-400 hover:border-gray-600 transition-colors duration-200 cursor-pointer" target="_blank">
                 {text}
-            </span>
+            </Link>
             <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-50 w-[500px]">
                 <Image 
                     src={imageSrc} 
                     alt={altText} 
-                    width={500}
+                    width={400}
                     height={500}
-                    className="w-full h-[500px] rounded-sm shadow-lg object-cover"
+                    className="w-[400px] h-full rounded-sm shadow-lg object-cover"
                 />
             </span>
         </span>
@@ -31,7 +32,7 @@ export default function AboutMe() {
                     <br></br>
                     <br></br>
 
-                    From coding warrior cat games on Scratch, to selling digital drawings on Deviantart, to <ImageTrigger text="selling clothing with original art" imageSrc="/images/emo.gif" altText="image of clothing designed"></ImageTrigger>, to singing and writing songs, I have always found creating to be the most meaningful way to spend my time.
+                    From coding warrior cat games on Scratch, to selling digital drawings on Deviantart, to <ImageTrigger text="selling clothing with original art" imageSrc="/images/picnic.png" altText="image of clothing designed" href="https://www.instagram.com/shop.cerulean"></ImageTrigger>, to singing and writing songs, I have always found creating to be the most meaningful way to spend my time.
                     <br></br>
                     <br></br>
 
