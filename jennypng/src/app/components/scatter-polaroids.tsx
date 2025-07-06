@@ -9,6 +9,7 @@ interface ScatterPolaroid {
     caption?: string;
     initialOffset: { x: number; y: number };
     finalOffset: { x: number; y: number };
+    mobileInitialOffset: { x: number; y: number };
     mobileFinalOffset: { x: number; y: number };
 }
 
@@ -18,47 +19,55 @@ const polaroids: ScatterPolaroid[] = [
         altText: "emo gif",
         caption: "Emotional moments",
         initialOffset: { x: 0, y: 0 },
-        finalOffset: { x: -900, y: 0 },
-        mobileFinalOffset: { x: 0, y: -200 }
+        finalOffset: { x: -70, y: 0 },
+        mobileInitialOffset: { x: 0, y: -40 },
+        mobileFinalOffset: { x: 0, y: -200 } 
     },
     {
         imageSrc: "/images/crown.gif",
         altText: "crown gif",
         caption: "Royal vibes",
         initialOffset: { x: 0, y: 0 },
-        finalOffset: { x: -100, y: 0 },
-        mobileFinalOffset: { x: 0, y: -100 }
+        finalOffset: { x: -25, y: 0 },
+        mobileInitialOffset: { x: 0, y: -25 },
+        mobileFinalOffset: { x: 0, y: -50 } 
     },
     {
         imageSrc: "/images/runring.gif",
         altText: "running ring gif",
         caption: "Always moving",
         initialOffset: { x: 0, y: 0 },
-        finalOffset: { x: 100, y: 0 },
-        mobileFinalOffset: { x: 0, y: 100 }
+        finalOffset: { x: 20, y: 0 },
+        mobileInitialOffset: { x: 0, y: 25 },
+        mobileFinalOffset: { x: 0, y: 20 }
     },
     {
         imageSrc: "/images/jj-gif.gif",
         altText: "jj gif",
         caption: "Good times",
         initialOffset: { x: 0, y: 0 },
-        finalOffset: { x: 300, y: 0 },
-        mobileFinalOffset: { x: 0, y: 200 }
+        finalOffset: { x: 65, y: 0 }, 
+        mobileInitialOffset: { x: 0, y: 100 },
+        mobileFinalOffset: { x: 0, y: 60 } 
     }
 ];
 
 export default function ScatterPolaroids() {
     const containerRef = useRef<HTMLDivElement>(null);
     const [isMobile, setIsMobile] = useState(false);
+    const [screenDimensions, setScreenDimensions] = useState({ width: 0, height: 0 });
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start end", "end start"]
     });
 
-    // Check if we're on mobile
+    // Check if we're on mobile and get screen dimensions
     useEffect(() => {
         const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768); // 768px is typical mobile breakpoint
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            setIsMobile(width < 768); // 768px is typical mobile breakpoint
+            setScreenDimensions({ width, height });
         };
         
         checkMobile();
@@ -70,26 +79,33 @@ export default function ScatterPolaroids() {
     return (
         <div 
             ref={containerRef}
-            className="relative w-full min-h-screen md:min-h-fit h-[500px] p-0 m-0 pb-4 -mt-32 flex items-center justify-center overflow-hidden"
+            className="relative w-full min-h-screen md:min-h-fit h-[1500px] md:h-[500px] p-0 m-0 pb-4 md:-mt-8 lg:-mt-32 flex items-center justify-center overflow-hidden"
         >
             {polaroids.map((polaroid, index) => {
-                // Use mobile or desktop final offset based on screen size
+                // Use mobile or desktop offsets based on screen size
+                const initialOffset = isMobile ? polaroid.mobileInitialOffset : polaroid.initialOffset;
                 const finalOffset = isMobile ? polaroid.mobileFinalOffset : polaroid.finalOffset;
+                
+                // Convert percentage offsets to pixel values based on screen dimensions
+                const finalXPixels = (finalOffset.x / 100) * screenDimensions.width;
+                const finalYPixels = (finalOffset.y / 100) * screenDimensions.height;
+                const initialXPixels = (initialOffset.x / 100) * screenDimensions.width;
+                const initialYPixels = (initialOffset.y / 100) * screenDimensions.height;
                 
                 const xTransform = useTransform(
                     scrollYProgress,
                     [0, 1],
-                    [polaroid.initialOffset.x, finalOffset.x]
+                    [initialXPixels, finalXPixels]
                 );
                 const yTransform = useTransform(
                     scrollYProgress,
                     [0, 1],
-                    [polaroid.initialOffset.y, finalOffset.y]
+                    [initialYPixels, finalYPixels]
                 );
                 const rotationTransform = useTransform(
                     scrollYProgress,
                     [0, 1],
-                    [0, 10 * (index % 2 === 0 ? 1 : -1)]
+                    [0, 5 * (index % 2 === 0 ? 1 : -1)]
                 );
                 const scaleTransform = useTransform(
                     scrollYProgress,

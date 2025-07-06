@@ -6,7 +6,7 @@ import { ImageTrigger } from "../components/image-trigger"
 export default function AboutMe() {
     return (
         <div className="w-full h-fit">
-            <div className="flex flex-col overflow-x-hidden min-h-screen sm:flex-row mb-0 p-20 pb-0 font-[family-name:var(--font-geist-sans)]">
+            <div className="flex flex-col overflow-x-hidden min-h-screen overflow-y-hidden sm:flex-row mb-0 p-20 pb-0 font-[family-name:var(--font-geist-sans)]">
                 <Polaroid imageSrc="/images/grad.jpg" altText="picture of me" caption="I graduated from the University of Washington with a bachelors in CS 🥳" />
                 <div className="mt-8 sm:mt-0 sm:ml-8">
                     <h1>hi! i'm jenny, and</h1>
