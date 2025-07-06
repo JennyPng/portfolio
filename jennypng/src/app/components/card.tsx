@@ -121,7 +121,7 @@ export default function Card({ title, description, image_paths, maxWidth, button
 
       {image_paths && <Image src={image_paths[0].image_path} width={800} height={300} alt={image_paths[0].image_alt} className="pt-4 object-contain max-h-[350px]"></Image>}
       
-      <div className="grid gap-2 pt-4 pb-2 max-h-[600px]">
+      <div className="grid gap-2 pt-4 pb-2 max-h-fit">
         {formatText(description, "sm")}
       </div>
       {
