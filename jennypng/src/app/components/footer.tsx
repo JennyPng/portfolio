@@ -14,7 +14,7 @@ export default function Footer() {
     return(
         <footer className="text-sm p-4 mx-8 flex flex-col md:flex-row justify-between">
           <p>Jenny Peng © 2025</p>
-          <p>built with next.js, tailwind css, figma, and <button className="bg-secondary-pink hover:bg-teal duration-170 hover:cursor-pointer" onClick={() => {setWordIdx((wordIdx + 1) % words.length)}}>{words[wordIdx]}</button></p>
+          <p>built with next.js, tailwind, motion, and <button className="bg-secondary-pink hover:bg-teal duration-170 hover:cursor-pointer" onClick={() => {setWordIdx((wordIdx + 1) % words.length)}}>{words[wordIdx]}</button></p>
         </footer>
     )
 }

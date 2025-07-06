@@ -8,9 +8,9 @@
 }
 
 /* Headings */
-.markdown h1 { color: var(--green-dark); font-size: 2.0rem; margin: 1.5rem 0; font-weight: 700; font-family: var(--font-caveat); }
-.markdown h2 { color: var(--green-dark); font-size: 1.75rem; margin: 1.25rem 0; font-weight: 600; font-family: var(--font-caveat); }
-.markdown h3 { color: var(--green-dark); font-size: 1.5rem; margin: 1rem 0; font-weight: 600; font-family: var(--font-caveat); }
+.markdown h1 { color: var(--green-dark); font-size: 2.5rem; margin: 1.5rem 0; font-weight: 700; font-family: var(--font-caveat); }
+.markdown h2 { color: var(--green-dark); font-size: 2.0rem; margin: 1.25rem 0; font-weight: 600; font-family: var(--font-caveat); }
+.markdown h3 { color: var(--green-dark); font-size: 1.75rem; margin: 1rem 0; font-weight: 600; font-family: var(--font-caveat); }
 
 /* Paragraphs */
 .markdown p { 
@@ -48,7 +48,7 @@
 
 /* Images */
 .markdown img {
-  max-width: 90%;
+  max-width: 80%;
   height: auto;
   justify-self: center;
   margin: 1rem 0;

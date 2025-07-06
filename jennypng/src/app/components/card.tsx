@@ -105,7 +105,6 @@ export default function Card({ title, description, image_paths, type_to_link, ma
     endDate === "present" ? endDate : formatDate(endDate as Date);
 
   const width = maxWidth ? maxWidth : 500
-  console.log(width)
 
   return (
     <div className={`card flex-col border-2 border-primary-green bg-secondary-background rounded-lg max-h-fit my-2 max-w-[${width}px] md:my-0 p-3 duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>

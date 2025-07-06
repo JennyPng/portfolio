@@ -79,7 +79,7 @@ export default function ScatterPolaroids() {
     return (
         <div 
             ref={containerRef}
-            className="relative w-full min-h-screen md:min-h-fit h-[1500px] md:h-[500px] p-0 m-0 pb-4 md:-mt-8 lg:-mt-32 flex items-center justify-center overflow-hidden"
+            className="relative w-full min-h-screen md:min-h-fit h-[1500px] md:h-[500px] p-0 m-0 pb-4 md:-mt-8 lg:-mt-12 flex items-center justify-center overflow-hidden"
         >
             {polaroids.map((polaroid, index) => {
                 // Use mobile or desktop offsets based on screen size
