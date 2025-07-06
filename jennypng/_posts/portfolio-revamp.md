@@ -25,6 +25,8 @@ but not enough to comfortably describe my skill level as intermediate. That proj
 6 week build space - I wanted to use this portfolio revamp, something with no real deadline, as a chance to go slowly, code cleanly, and really strengthen
 my foundational knowledge.
 
+Exploring what really feels like *me.*
+
 ## process
 - I made a Figma mockup as a rough sketch of what I wanted
 - I started coding at the Osaka airport lol, and coded a bit on the high-speed rail in China
@@ -55,6 +57,7 @@ as I read this was good for 2D layouts over flex, but it was a bit rigid - cards
     - col
 - flex for 1D, grid for 2D
 
+- taking good notes come in handy!! found several nice fonts easily with [fontjoy](https://fontjoy.com/), which I remembered a product designer guest speaker mentioned in a software entrepreneurship course I took two years ago, and luckily noted down in my notion.
 
 ### css
 

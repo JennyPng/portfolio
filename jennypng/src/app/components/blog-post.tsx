@@ -16,7 +16,7 @@ export default function BlogPostCard({ title, date, description, image } : BlogP
                 <p className="text-lg max-w-[220px] font-caveat font-[700]">{title}</p>
                 {date && <p className="text-sm max-w-[220px] mb-2 font-caveat font-[500]">{new Date(date).toDateString()}</p>}
                 <hr className="max-w-[200px] border-1 text-primary-green mb-2"></hr>
-                {description && <p className="text-md max-w-[200px] font-caveat font-[500]">{description}</p>}
+                {description && <p className="text-sm max-w-[200px] font-caveat font-[500]">{description}</p>}
             </div>
         </div>
     )
