@@ -1,5 +1,10 @@
 @reference "../globals.css";
 
+.markdown {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 .markdown * {
   /* General styling */
   font-size: 1.10rem;

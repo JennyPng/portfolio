@@ -3,6 +3,7 @@ import Card from "./card";
 import cardsData from "../data/cards.json";
 import { CardProps } from "./card";
 import { useState } from "react";
+import { motion, AnimatePresence, easeOut } from "framer-motion";
 
 const CardTags = ["featured", "all", "ar/vr", "web", "ai/ml", "game", "systems", "hackathon", "course" , "research"]
 
@@ -11,6 +12,43 @@ const projects : CardProps[] = cardsData.projects
 // TODO check t's - would it be better to have this in folders rather than one json?
 export default function Projects({className} : {className?: string}) {
     const [projectFilter, setProjectFilter] = useState("featured")
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { 
+            opacity: 0, 
+            y: 15 
+        },
+        visible: { 
+            opacity: 1, 
+            y: 0,
+            transition: {
+                duration: 0.3,
+                ease: easeOut
+            }
+        }
+    };
+
+    const filteredProjects = projects.filter((project) => {
+        if (projectFilter === "all") return project;
+        if (project.tags?.includes(projectFilter)) return project;
+        return false;
+    });
+
+    const getColumnClass = () => {
+        return projectFilter === "featured" 
+            ? "projects-cards columns-1 md:columns-2 gap-8"
+            : "projects-cards columns-1 md:columns-2 lg:columns-3 gap-8";
+    };
 
     return(
         <div className={`${className}`} id="projects" scroll-mt="15px">
@@ -23,28 +61,26 @@ export default function Projects({className} : {className?: string}) {
                     return <button onClick={(e) => setProjectFilter(tag)} key={tag} className="p-2 mx-4 ml-0 hover:bg-secondary-pink hover:cursor-pointer hover:text-tertiary-green duration-170">{tag}</button>
                 })}
             </div>
-            {(projectFilter == "featured") ?
-                <div className={"projects-cards columns-1 md:columns-2 gap-8"}>
-                {
-                    projects.filter((project) => {
-                        if (project.tags?.includes(projectFilter)) return project
-                    }).map((project) => {
-                        return <div key={project.title} className="break-inside-avoid mb-8"><Card {...project}></Card></div>
-                    })
-                }
-                </div>
-                :
-                <div className={"projects-cards columns-1 md:columns-2 lg:columns-3 gap-8"}>
-                {
-                    projects.filter((project) => {
-                        if (projectFilter == "all") return project
-                        if (project.tags?.includes(projectFilter)) return project
-                    }).map((project) => {
-                        return <div key={project.title} className="break-inside-avoid mb-8"><Card {...project}></Card></div>
-                    })
-                }
-                </div>
-            }
+            <AnimatePresence mode="wait">
+                <motion.div 
+                    key={projectFilter}
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit={{ opacity: 0, transition: { duration: 0.2 } }}
+                    className={getColumnClass()}
+                >
+                    {filteredProjects.map((project) => (
+                        <motion.div 
+                            key={project.title} 
+                            variants={itemVariants}
+                            className="break-inside-avoid mb-8"
+                        >
+                            <Card {...project}></Card>
+                        </motion.div>
+                    ))}
+                </motion.div>
+            </AnimatePresence>
         </div>
     )
 }

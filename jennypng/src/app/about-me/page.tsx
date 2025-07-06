@@ -1,7 +1,7 @@
 import Polaroid from "../components/polaroid"
 import ScatterPolaroids from "../components/scatter-polaroids"
 import { ImageTrigger } from "../components/image-trigger"
-
+import Link from "next/link"
 
 export default function AboutMe() {
     return (
@@ -28,7 +28,7 @@ export default function AboutMe() {
 
                         <br></br>
                         <br></br>
-                        Reach me at jennypeng2020@gmail.com ✉️
+                        Find me at jennypeng2020@gmail.com ✉️ , <Link href="https://www.linkedin.com/in/peng-jenny/" target="_blank" className="bg-secondary-pink hover:bg-primary-pink transition-colors duration-175">linkedin</Link> , <Link href="https://github.com/jennypng" target="_blank" className="bg-secondary-pink hover:bg-primary-pink transition-colors duration-175">github</Link>
 
                         
                     </p>
