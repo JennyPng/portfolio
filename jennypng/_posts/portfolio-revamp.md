@@ -6,8 +6,6 @@ excerpt: "Documenting the thought process and learnings behind creating my curre
 
 > Documenting the thought process and learnings behind creating my current portfolio website, aka what you're looking at right now
 
-The raw, unrevised dev log can be found [in my garden](https://jennypng.netlify.app/software-projects/portfolio-revamp)
-
 ## goals
 I made my first portfolio website over winter break of freshman year (undergrad) to buff up my barren resume for an application to a robotics club.
 
