@@ -15,36 +15,36 @@ interface ScatterPolaroid {
 
 const polaroids: ScatterPolaroid[] = [
     {
-        imageSrc: "/images/emo.gif",
-        altText: "emo gif",
-        caption: "Emotional moments",
+        imageSrc: "/images/apt.jpg",
+        altText: "picture of college apartment",
+        caption: "Capturing my senior year apartment, when I lived with my friends💌",
         initialOffset: { x: 0, y: 0 },
         finalOffset: { x: -70, y: 0 },
         mobileInitialOffset: { x: 0, y: -40 },
         mobileFinalOffset: { x: 0, y: -200 } 
     },
     {
-        imageSrc: "/images/crown.gif",
-        altText: "crown gif",
-        caption: "Royal vibes",
+        imageSrc: "/images/lab.jpg",
+        altText: "picture of me",
+        caption: "Commemorating the hours spent debugging in the CSE labs💻",
         initialOffset: { x: 0, y: 0 },
         finalOffset: { x: -25, y: 0 },
         mobileInitialOffset: { x: 0, y: -25 },
         mobileFinalOffset: { x: 0, y: -50 } 
     },
     {
-        imageSrc: "/images/runring.gif",
-        altText: "running ring gif",
-        caption: "Always moving",
+        imageSrc: "/images/cq.jpg",
+        altText: "picture of chongqing temple",
+        caption: "📍Chongqing. a temple beautiful at every angle",
         initialOffset: { x: 0, y: 0 },
         finalOffset: { x: 20, y: 0 },
         mobileInitialOffset: { x: 0, y: 25 },
         mobileFinalOffset: { x: 0, y: 20 }
     },
     {
-        imageSrc: "/images/jj-gif.gif",
-        altText: "jj gif",
-        caption: "Good times",
+        imageSrc: "/images/jp.jpg",
+        altText: "photo of tokyo skytree",
+        caption: "Photo from my first trip to Japan📷",
         initialOffset: { x: 0, y: 0 },
         finalOffset: { x: 65, y: 0 }, 
         mobileInitialOffset: { x: 0, y: 100 },
