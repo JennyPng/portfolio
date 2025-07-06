@@ -1,6 +1,5 @@
 import { getAllPosts } from '../../../lib/posts';
 import BlogPostCard from '../components/blog-post';
-import Card from '../components/card';
 
 function getPosts() {
   const allPosts = getAllPosts();

@@ -76,52 +76,163 @@ export default function ScatterPolaroids() {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+    // Create individual transform hooks for each polaroid
+    const polaroid0InitialOffset = isMobile ? polaroids[0].mobileInitialOffset : polaroids[0].initialOffset;
+    const polaroid0FinalOffset = isMobile ? polaroids[0].mobileFinalOffset : polaroids[0].finalOffset;
+    const polaroid0FinalXPixels = (polaroid0FinalOffset.x / 100) * screenDimensions.width;
+    const polaroid0FinalYPixels = (polaroid0FinalOffset.y / 100) * screenDimensions.height;
+    const polaroid0InitialXPixels = (polaroid0InitialOffset.x / 100) * screenDimensions.width;
+    const polaroid0InitialYPixels = (polaroid0InitialOffset.y / 100) * screenDimensions.height;
+    
+    const polaroid0XTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [polaroid0InitialXPixels, polaroid0FinalXPixels]
+    );
+    const polaroid0YTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [polaroid0InitialYPixels, polaroid0FinalYPixels]
+    );
+    const polaroid0RotationTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [0, 5]
+    );
+    const polaroid0ScaleTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [0.8, 1]
+    );
+
+    const polaroid1InitialOffset = isMobile ? polaroids[1].mobileInitialOffset : polaroids[1].initialOffset;
+    const polaroid1FinalOffset = isMobile ? polaroids[1].mobileFinalOffset : polaroids[1].finalOffset;
+    const polaroid1FinalXPixels = (polaroid1FinalOffset.x / 100) * screenDimensions.width;
+    const polaroid1FinalYPixels = (polaroid1FinalOffset.y / 100) * screenDimensions.height;
+    const polaroid1InitialXPixels = (polaroid1InitialOffset.x / 100) * screenDimensions.width;
+    const polaroid1InitialYPixels = (polaroid1InitialOffset.y / 100) * screenDimensions.height;
+    
+    const polaroid1XTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [polaroid1InitialXPixels, polaroid1FinalXPixels]
+    );
+    const polaroid1YTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [polaroid1InitialYPixels, polaroid1FinalYPixels]
+    );
+    const polaroid1RotationTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [0, -5]
+    );
+    const polaroid1ScaleTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [0.8, 1]
+    );
+
+    const polaroid2InitialOffset = isMobile ? polaroids[2].mobileInitialOffset : polaroids[2].initialOffset;
+    const polaroid2FinalOffset = isMobile ? polaroids[2].mobileFinalOffset : polaroids[2].finalOffset;
+    const polaroid2FinalXPixels = (polaroid2FinalOffset.x / 100) * screenDimensions.width;
+    const polaroid2FinalYPixels = (polaroid2FinalOffset.y / 100) * screenDimensions.height;
+    const polaroid2InitialXPixels = (polaroid2InitialOffset.x / 100) * screenDimensions.width;
+    const polaroid2InitialYPixels = (polaroid2InitialOffset.y / 100) * screenDimensions.height;
+    
+    const polaroid2XTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [polaroid2InitialXPixels, polaroid2FinalXPixels]
+    );
+    const polaroid2YTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [polaroid2InitialYPixels, polaroid2FinalYPixels]
+    );
+    const polaroid2RotationTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [0, 5]
+    );
+    const polaroid2ScaleTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [0.8, 1]
+    );
+
+    const polaroid3InitialOffset = isMobile ? polaroids[3].mobileInitialOffset : polaroids[3].initialOffset;
+    const polaroid3FinalOffset = isMobile ? polaroids[3].mobileFinalOffset : polaroids[3].finalOffset;
+    const polaroid3FinalXPixels = (polaroid3FinalOffset.x / 100) * screenDimensions.width;
+    const polaroid3FinalYPixels = (polaroid3FinalOffset.y / 100) * screenDimensions.height;
+    const polaroid3InitialXPixels = (polaroid3InitialOffset.x / 100) * screenDimensions.width;
+    const polaroid3InitialYPixels = (polaroid3InitialOffset.y / 100) * screenDimensions.height;
+    
+    const polaroid3XTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [polaroid3InitialXPixels, polaroid3FinalXPixels]
+    );
+    const polaroid3YTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [polaroid3InitialYPixels, polaroid3FinalYPixels]
+    );
+    const polaroid3RotationTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [0, -5]
+    );
+    const polaroid3ScaleTransform = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [0.8, 1]
+    );
+
+    const polaroidTransforms = [
+        {
+            xTransform: polaroid0XTransform,
+            yTransform: polaroid0YTransform,
+            rotationTransform: polaroid0RotationTransform,
+            scaleTransform: polaroid0ScaleTransform
+        },
+        {
+            xTransform: polaroid1XTransform,
+            yTransform: polaroid1YTransform,
+            rotationTransform: polaroid1RotationTransform,
+            scaleTransform: polaroid1ScaleTransform
+        },
+        {
+            xTransform: polaroid2XTransform,
+            yTransform: polaroid2YTransform,
+            rotationTransform: polaroid2RotationTransform,
+            scaleTransform: polaroid2ScaleTransform
+        },
+        {
+            xTransform: polaroid3XTransform,
+            yTransform: polaroid3YTransform,
+            rotationTransform: polaroid3RotationTransform,
+            scaleTransform: polaroid3ScaleTransform
+        }
+    ];
+
     return (
         <div 
             ref={containerRef}
             className="relative w-full min-h-screen md:min-h-fit h-[1500px] md:h-[500px] p-0 m-0 pb-4 md:-mt-8 lg:-mt-12 flex items-center justify-center overflow-hidden"
         >
             {polaroids.map((polaroid, index) => {
-                // Use mobile or desktop offsets based on screen size
-                const initialOffset = isMobile ? polaroid.mobileInitialOffset : polaroid.initialOffset;
-                const finalOffset = isMobile ? polaroid.mobileFinalOffset : polaroid.finalOffset;
-                
-                // Convert percentage offsets to pixel values based on screen dimensions
-                const finalXPixels = (finalOffset.x / 100) * screenDimensions.width;
-                const finalYPixels = (finalOffset.y / 100) * screenDimensions.height;
-                const initialXPixels = (initialOffset.x / 100) * screenDimensions.width;
-                const initialYPixels = (initialOffset.y / 100) * screenDimensions.height;
-                
-                const xTransform = useTransform(
-                    scrollYProgress,
-                    [0, 1],
-                    [initialXPixels, finalXPixels]
-                );
-                const yTransform = useTransform(
-                    scrollYProgress,
-                    [0, 1],
-                    [initialYPixels, finalYPixels]
-                );
-                const rotationTransform = useTransform(
-                    scrollYProgress,
-                    [0, 1],
-                    [0, 5 * (index % 2 === 0 ? 1 : -1)]
-                );
-                const scaleTransform = useTransform(
-                    scrollYProgress,
-                    [0, 1],
-                    [0.8, 1]
-                );
+                const transforms = polaroidTransforms[index];
                 
                 return (
                     <motion.div
                         key={index}
                         className="absolute"
                         style={{
-                            x: xTransform,
-                            y: yTransform,
-                            rotate: rotationTransform,
-                            scale: scaleTransform,
+                            x: transforms.xTransform,
+                            y: transforms.yTransform,
+                            rotate: transforms.rotationTransform,
+                            scale: transforms.scaleTransform,
                             zIndex: index
                         }}
                         transition={{ duration: 0.5, ease: "easeOut" }}

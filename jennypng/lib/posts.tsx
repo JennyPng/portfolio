@@ -2,7 +2,6 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { join } from 'path';
 import { remark } from "remark";
-import html from "remark-html";
 import rehypeExternalLinks from 'rehype-external-links'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'

@@ -58,7 +58,7 @@ export default function Projects({className} : {className?: string}) {
                     if (tag == projectFilter) {
                         return <button key={tag} className="p-2 text-tertiary-green mx-4 ml-0 bg-secondary-pink hover:bg-primary-pink hover:cursor-pointer duration-170">{tag}</button>
                     }
-                    return <button onClick={(e) => setProjectFilter(tag)} key={tag} className="p-2 mx-4 ml-0 hover:bg-secondary-pink hover:cursor-pointer hover:text-tertiary-green duration-170">{tag}</button>
+                    return <button onClick={() => setProjectFilter(tag)} key={tag} className="p-2 mx-4 ml-0 hover:bg-secondary-pink hover:cursor-pointer hover:text-tertiary-green duration-170">{tag}</button>
                 })}
             </div>
             <AnimatePresence mode="wait">

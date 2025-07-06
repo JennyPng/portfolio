@@ -92,7 +92,7 @@ const formatText = (text: string | string[], size: "md" | "sm") => {
 };
 
 
-export default function Card({ title, description, image_paths, type_to_link, maxWidth, buttons, footer, className, dates }: CardProps) {
+export default function Card({ title, description, image_paths, maxWidth, buttons, footer, className, dates }: CardProps) {
   const startDate = dates ? new Date(dates.startYear, dates.startMonth - 1) : undefined;
   const endDate = (dates?.endMonth && dates?.endYear)
     ? new Date(dates.endYear, dates.endMonth - 1)

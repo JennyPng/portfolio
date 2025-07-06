@@ -9,7 +9,7 @@ export default function AboutMe() {
             <div className="flex flex-col overflow-x-hidden min-h-[80vh] overflow-y-hidden sm:flex-row mb-0 p-20 pb-0 font-[family-name:var(--font-geist-sans)]">
                 <Polaroid imageSrc="/images/grad.jpg" altText="picture of me" caption="I graduated from the University of Washington with a bachelors in CS 🥳" />
                 <div className="mt-8 sm:mt-0 sm:ml-8">
-                    <h1>hi! i'm jenny, and</h1>
+                    <h1>hi! i&apos;m jenny, and</h1>
                     <p className="max-w-full sm:max-w-[70%] text-tertiary-green">
                         I have always loved to create, though the medium of choice has shifted over the years.
                         <br></br>
@@ -23,7 +23,7 @@ export default function AboutMe() {
                         <br></br>
                         <br></br>
 
-                        I love trying new things. I want to build impactful systems and tell stories that inspire. I'm currently working on Jam Journal 
+                        I love trying new things. I want to build impactful systems and tell stories that inspire. I&apos;m currently working on Jam Journal
                         - a platform for people that think about music; a small visual novel game about humanity; other experiments at the intersection of art and tech.
 
                         <br></br>
