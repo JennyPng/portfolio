@@ -108,7 +108,7 @@ export default function Card({ title, description, image_paths, maxWidth, button
   const width = maxWidth ? maxWidth : 500
 
   return (
-    <div className={`card flex-col border-2 border-primary-green bg-secondary-background rounded-lg max-h-fit my-2 max-w-[${width}px] md:my-0 p-3 duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
+    <div className={`card flex-col border-2 border-primary-green bg-secondary-background rounded-lg my-2 max-w-[${width}px] md:my-0 p-3 duration-170 hover:shadow-[-4px_3px_0px_0px] hover:shadow-primary-green ${className || ''}`}>
       <div className="flex-col">
         <div className="pb-2 flex flex-row justify-between">
           {formatText(title, "md")}
