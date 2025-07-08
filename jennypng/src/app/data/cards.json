@@ -95,6 +95,11 @@
           {
             "text": "demo",
             "link": "https://www.youtube.com/watch?v=j0EMnODYyE0"
+          },
+          {
+            "text": "blog post",
+            "link": "/blog/arc-racing-dev-log",
+            "internal": true
           }
         ],
         "footer": "c#, unity, photon fusion",

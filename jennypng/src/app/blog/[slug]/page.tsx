@@ -1,6 +1,5 @@
 import { getPostBySlug, markdownToHtml } from "../../../../lib/posts"
 import markdownStyles from "../../_styles/markdown.module.css";
-import Image from "next/image";
 
 export default async function BlogPost({
   params,
