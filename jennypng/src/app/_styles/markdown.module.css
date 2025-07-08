@@ -31,6 +31,7 @@
   color: var(--green-med);
   background-color: var(--blue);
   text-decoration: none;
+  transition: background-color 175ms;
 }
 .markdown a:hover {
   background-color: var(--blue-dark);
