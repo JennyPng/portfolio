@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 
 const navLinks = [
   { href: "/#projects", label: "projects" },
-  { href: "/#experience", label: "experience" },
+  { href: "/#experience", label: "resume" },
   { href: "/about-me", label: "about" },
-  // { href: "/blog", label: "blog" },
+  { href: "/blog", label: "blog" },
   // { href: "/art", label: "art" },
   { href: "https://jennypng.netlify.app/", label: "🌱", external: true },
 ];

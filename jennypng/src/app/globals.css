@@ -80,7 +80,26 @@ h1 {
   stroke-dashoffset: 0;
 }
 
+.blog-bg {
+  position: relative;
+  z-index: 0;
+}
 
+.blog-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url('/images/crinkle.jpg');
+  background-repeat: repeat;
+  background-size: 100% 100%;
+  filter: brightness(1.22);
+  opacity: 0.85;
+  pointer-events: none;
+  /* Feathered mask: */
+  mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+}
 
 /* Custom jiggle animation for Tailwind */
 @keyframes jiggle {

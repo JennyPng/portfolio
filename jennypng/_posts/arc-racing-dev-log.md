@@ -8,6 +8,7 @@ excerpt: "Learnings from developing my first serious AR application over 8 weeks
 > Learnings from developing my first serious AR application over 8 weeks in a team of 4
 
 ## Project description
+Multiplayer, co-located AR racing game allowing players in the same room to compete on custom, environment-aware, procedurally-generated racetracks.
 
 ## challenges
 
