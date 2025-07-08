@@ -21,7 +21,7 @@ Built in a team of 4 over 8 weeks, for Meta Quest 3, @ [CSE481v: VR Capstone](ht
 
 - It was *really* difficult to think of a suitable capstone project idea actually... 
 - The professors expected something novel and technically complex in some way
-    - it was a bit difficult to be original in the ar/vr space - many of our ideas (time machine, wizard dueling, angry birds) had been done
+    - it was a bit difficult to be original in the ar/vr space - many of our ideas (AR time machine, escape room, wizard dueling, angry birds) had been done
     - our scope was also constrained by the feasibility of implementing the MVP in 8 weeks...
 - Remote control car racing was pitched by one member of our team, since he has particular interest in RC cars. While the rest of us didn't have as much interest in the racing element itself, the technical challenges of the concept were intriguing. Also, we did not manage to think of anything more compelling xd
     - The procedural generation of the racetrack was the novel and complex element of our project concept
@@ -41,14 +41,14 @@ Another challenging aspect of this experience was that the course staff expected
 ## Research and Planning
 
 - Compiled a doc of seemingly relevant videos and tutorials
-    - Found lots of videos specifically on procedurally generated roads, but most didn't fit our use case - they weren't AR/R/VR/3D, or they didn't consider pathfinding, etc...
+    - Found lots of videos specifically on procedurally generated roads, but most didn't fit our use case - they weren't AR/VR/3D, or they didn't consider pathfinding, etc...
     - Things we looked into include: dijkstra's, A*, rapidly exploring random tree, voronoi diagrams, union-find in generating dungeons, L-systems, voxel grids
 - A key consideration was that the Meta Quest headset has limited computational power and memory, so we needed an optimized solution
 - We were fortunate to find a handful of tutorials that, combined, came very close to what we needed
-    - [How To Build Roads Procedurally In Unity with the Splines Package](https://www.youtube.com/watch?v=ZiHH_BvjoGk)
-        - This informed how splines could be used for procedural road generation, although this wasn't fully for 3D
     - [Create more with splines | Unity 2022 splines](https://www.youtube.com/watch?v=n-o2e4KxbW4)
         - This affirmed that splines was something we should use in our implementation. The new unknown stemming from this was how to implement procedural mesh extrusion from a spline?
+    - [How To Build Roads Procedurally In Unity with the Splines Package](https://www.youtube.com/watch?v=ZiHH_BvjoGk)
+        - This informed how splines could be used for procedural road generation, although this wasn't fully for 3D
     - [Using Octrees and A* for Efficient Pathfinding](https://www.youtube.com/watch?v=gNmPmWR2vV4)
         - This tutorial was a goldmine and is much of the foundation of our pathfinding. 
         - Its usecase is for flying characters pathfinding around obstacles in 3D games
@@ -65,10 +65,14 @@ My main role was in researching and implementing the 3D pathfinding aspect of th
 
 We got stuck on the track generation for 2+ weeks...
 
+debugging
+
 todo
 
 ## Learnings
-todo
+- In the research phase, I got a brief introduction to how procedural generation is used in many interesting ways
+- 
 
+- the importance of optimization was really felt here
 ## Key Takeaways
 todo
