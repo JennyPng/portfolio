@@ -79,7 +79,7 @@ My main role was in researching and implementing the 3D pathfinding aspect of th
 
 - With the help of GPT, I implemented a basic script that, when given a preset spline, could extrude a basic 3D mesh with customizable thickness and width. I started with this since it was a key element that the rest of the project required. This was buggy tho, as in certain spline knot configurations caused very warped and undriveable meshes - I handed this off to another team member to improve upon
     - Later on, improvements to the mesh creation were done but we also added UI feature to inform the player if checkpoint placements were too close and likely to cause mesh warping
-- Another member and I implemented the octree/A* tutorial in a scratch 3D Unity scene, to learn how it worked. We created a cube, that given a start and end xyz point, could navigate a path that avoided other gameobjects. 
+- Another member and I implemented the octree/A* tutorial in a scratch 3D Unity scene, to learn how it worked. We created a cube, that given a start and end xyz point, could navigate a path that avoided other GameObjects. 
     - Using the bounds of the obstacle GameObjects, we constructed an octree that recursively subdivided only in regions where obstacles were present. This created a sparse tree in empty areas and denser subdivisions near obstacles, efficiently representing navigable space.
     - From this octree, we built a graph: each empty leaf node (a region not intersecting any obstacle bounds and smaller than a minimum size threshold) became a graph node. We added edges between neighboring leaf nodes — either siblings or ones with intersecting bounds — resulting in a graph that represented all the valid paths through 3D space, avoiding collisions.
 ![screenshot of octree and graph](https://i.imgur.com/sZw8wFS.jpeg)
@@ -121,6 +121,6 @@ The stagnating pathfinding blocked our overall progress for a bit. Better parall
 ## Learnings
 - In the research phase, I got a brief introduction to how procedural generation is used in many interesting ways
 - Manage game state in one place. Early on, we had a messy chain of function calls scattered across different classes, which was confusing. We refactored these into a global GameManager.
-- The importance of optimization was really felt here. Changing a minheap to a priorityqueue, and a list to a hashset, all caused noticeable speedups in pathfinding.
+- The importance of optimization was really felt here. Changing a SortedSet to a priorityqueue, and a list to a hashset, all caused noticeable speedups in pathfinding.
 - It was just cool to apply graphs and pathfinding, something I only had experience with from data structures courses, to a real application
 
