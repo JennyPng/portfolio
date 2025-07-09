@@ -54,8 +54,11 @@
 
 /* Images */
 .markdown img {
-  max-width: 80%;
+  max-width: 70%;
+  max-height: 400px; /* Constrain maximum height */
+  padding: 1rem;
   height: auto;
   justify-self: center;
   margin: 1rem 0;
+  object-fit: contain; /* Maintains aspect ratio */
 }
