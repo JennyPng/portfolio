@@ -12,7 +12,7 @@ Multiplayer, co-located AR racing game allowing players in the same room to comp
 
 Players can place checkpoints around the real world, and the game will generate a racetrack that passes through all the designated checkpoints, while avoiding real-world obstacles such as tables, chairs, and more (anything recognizable by the Meta Scene API).
 
-We allow unlimited randomized track creation with environmental context, without the tedium of having to manually place every piece of the track. The advantage of this being AR is that players can create racetracks not possible in reality.
+We allow unlimited track creation with environmental context, without the tedium of having to manually place every piece of the track. The advantage of this being AR is that players can create racetracks not possible in reality.
 
 Built in a team of 4 over 8 weeks, for Meta Quest 3, @ [CSE481v: VR Capstone](https://courses.cs.washington.edu/courses/cse481v/25sp/)
 
@@ -28,7 +28,7 @@ See the [video demo](https://www.youtube.com/watch?v=j0EMnODYyE0)
     - our scope was also constrained by the feasibility of implementing the MVP in 8 weeks...
 - Remote control car racing was pitched by one member of our team, since he has particular interest in RC cars. While the rest of us didn't have as much interest in the racing element itself, the technical challenges of the concept were intriguing. 
     - The procedural generation of the racetrack was the novel and complex element of our project concept
-    - After deciding on the idea, there were still so many unknowns as none of us had experience with procedural generation 
+    - There were many unknowns as none of us had experience with procedural generation 
 - There was ambiguity in how to approach implementation; while AR RC racing games actually existed already, with some even allowing track customization, we 
 didn't see anything using procedural generation for track customization
 
