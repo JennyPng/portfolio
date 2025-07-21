@@ -26,6 +26,8 @@ but not enough to comfortably describe my skill level as intermediate. That proj
 6 week build space - I wanted to use this portfolio revamp, something with no real deadline, as a chance to go slowly, code cleanly, and really strengthen
 my foundational knowledge.
 
+I'm writing this to document thought processes+challenges, and retain valuable learnings! Learning happens best through teaching and explaining.
+
 ## high-level process
 Exploring what really feels like *me*, my identity, and how I want to present myself in the form of a website.
 
@@ -61,13 +63,16 @@ The blog logic consists of:
 - blog/[slug] page 
     - I think next.js app router will pass in Promise<{slug}> to dynamic route components
     - Awaits the promise, and uses `getPostBySlug`
-    - Blog content is placed in a div, with classname applying custom markdown styles defined in `markdown.module.css`, and uses 'dangerouslySetInnerHTML' to set content to html generated from the markdown file
+    - Blog content is placed in a div, with classname applying custom markdown styles defined in `markdown.module.css`. Uses 'dangerouslySetInnerHTML' to set content to html generated from the markdown file.
+        - scary name lol but for hard coded content, should be fine
+        - dangerous due to [XSS vulnerabilities](https://portswigger.net/web-security/cross-site-scripting) - sanitization matters when dealing with user input
 - blog page
     - gets all posts and maps them to blog-post card components
 - blog-post UI component
     - Renders the blog preview with title, date, desc, image as props
     - used a notebook image as the background of the card to introduce a fun analog element - image uses `object-cover` and `fill` for the notebook to take up the entire div
     - had content overlay ontop of the notebook image via `absolute inset-0`, and used flex layout on children components
+        - inset corresponds to top, left, right, bottom properties ([source](https://developer.mozilla.org/en-US/docs/Web/CSS/inset))
 - markdown.module.css
     - a `module.css` file TODO
 

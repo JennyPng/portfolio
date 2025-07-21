@@ -39,7 +39,7 @@
 
 /* Code */
 .markdown code {
-  background-color: var(--color-secondary-pink);
+  background-color: #edf3ea;
   padding: 0.2rem 0.4rem;
   border-radius: 0.25rem;
   font-family: monospace;
