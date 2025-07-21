@@ -1,6 +1,6 @@
 ---
 title: "Portfolio Dev Log"
-date: "2025-07-20"
+date: "2025-07-25"
 coverImage: "/images/port.png"
 excerpt: "Documenting the thought process and learnings behind creating my current portfolio website"
 ---
@@ -26,7 +26,7 @@ but not enough to comfortably describe my skill level as intermediate. That proj
 6 week build space - I wanted to use this portfolio revamp, something with no real deadline, as a chance to go slowly, code cleanly, and really strengthen
 my foundational knowledge.
 
-## process
+## high-level process
 Exploring what really feels like *me*, my identity, and how I want to present myself in the form of a website.
 
 - I made a Figma mockup as a rough sketch of what I wanted. This wasn't the most high fidelity, but it had the color palette, general layout, and planned content defined
@@ -42,31 +42,34 @@ Exploring what really feels like *me*, my identity, and how I want to present my
 - Spent way too long looking for fonts 
 - Started vibe coding animated elements with Cursor - the moving blob on the home page, the polaroid hover jiggle animation, polaroid scroll spread animation, nav-bar hover animation, and project gallery fade in - the more complicated ones took maaaaany prompting iterations and human guidance - as I already believed from research experiences, LLMs struggle severely with coding up creative visuals
 - Reviewed the code to actually understand how to implement those things lol, and tweaked aspects like animation durations and positioning
+- Kept adding fun details - paper texture on the blog page, etc. - still more to be added over time! but i really wanted to just deploy it at this point...i've accepted that i'm the type of person that really needs to share what i make LOL even if to a tiny audience, publicizing is my closure
 
-## challenges
-- **Project gallery**: 
-    - I struggled a little with how to layout the project cards. I discovered that what I needed was a masonry layout. I attempted to use CSS grid,
-as I read this was good for 2D layouts over flex, but it was a bit rigid - cards in the same row were forced to be the same height or there was blank space between rows if some cards were shorted in height than others within the same row. 
-    - I found a work-around by changing grid to a column layout, but this meant the project content order was in the column direction rather than row (i.e. most recent projects are in the first column and not the first row). Settled with this for now, will probably look into external libraries later.
-- **Animations**: I really wanted to add some fun, animated visual elements. 
-    - I knew of anime js, motion js, and gsap - I chose to try motion js because it seemed very commonly used and most approachable
-    - v0 and cursor were useful for starting out, to see how the specific things i need can be done. 
-    - I tried to consider how to make certain animations mobile friendly, specifically the polaroid scroll spread on the about-me page. 
-- **Playful design**: while I wanted this to be a somewhat formal showcase of my work, I also wanted it to be playful, artistic, and true to my personality. The design and process involved a lot of exploring what visually feels like me 
+# implementation details + learnings
+(literally anything i did or learned that i think is worth remembering)
 
-# learnings
-(literally anything new i learned that i think is worth remembering)
+## blog section
+I wanted to avoid the complexity of adding backend logic just for the blog, so I chose the approach of rendering markdown files as blog posts.
 
-## general
-- anything with repeated styling should have data stored in some structure and map to a generic component (i did this for projects and blog posts, but didn't think initially to do it for nav bar links too - needed to refactor this to apply a fancier svg animation to all nav links)
-
-## css layouts
-- inset-0
-- col
-- top,left,right,bottom specify the closeness to the particular margin
-- /
-- flex for 1D, grid for 2D
-- image sizing and setting appropriate yet responsive max/min width/heights was tricky... I still have a lot to learn about flex and grid properties 
+The blog logic consists of:
+- _posts directory
+    - contains markdown files as blog content
+    - the underscore in the name prevents next.js app router from using this directory as a route 
+- lib/posts
+    - `getPostSlugs()` - reads all markdown files from _posts directory and returns file names
+    - `getPostBySlug(slug)` - removes '.md' from slug, constructs full file path, reads file content, and parses markdown metadata+content using `gray-matter`; parses as custom type Post.
+    - `markdownToHtml` - helper function using `remark` to convert markdown to html
+- blog/[slug] page 
+    - I think next.js app router will pass in Promise<{slug}> to dynamic route components
+    - Awaits the promise, and uses `getPostBySlug`
+    - Blog content is placed in a div, with classname applying custom markdown styles defined in `markdown.module.css`, and uses 'dangerouslySetInnerHTML' to set content to html generated from the markdown file
+- blog page
+    - gets all posts and maps them to blog-post card components
+- blog-post UI component
+    - Renders the blog preview with title, date, desc, image as props
+    - used a notebook image as the background of the card to introduce a fun analog element - image uses `object-cover` and `fill` for the notebook to take up the entire div
+    - had content overlay ontop of the notebook image via `absolute inset-0`, and used flex layout on children components
+- markdown.module.css
+    - a `module.css` file TODO
 
 ## blob animation
 
@@ -82,20 +85,27 @@ in the background and I thought that was a really interesting way to add visual 
 I love incorporating hand-drawn/analog into digital experiences. It's just so fun lol. So I wanted an animated scribble to
 appear on hover, which I've seen in a few different portfolios.
 
-## blog section
-I wanted to avoid the complexity of adding backend logic just for the blog, so I chose the approach of rendering markdown files as blog posts.
+## general
+- anything with repeated styling should have data stored in some structure and map to a generic component (i did this for projects and blog posts, but didn't think initially to do it for nav bar links too - needed to refactor this to apply a fancier svg animation to all nav links)
 
-The blog logic consists of:
-- _posts directory
-    - contains markdown files as blog content
-    - the underscore in the name prevents next.js app router from using this directory as a route 
-- lib/posts
-    - defines a Post type
-    - has a function `getPostSlugs`
-- blog/[slug] page 
-- blog page
-- blog-post UI component
+## css layouts
+- inset-0
+- col
+- top,left,right,bottom specify the closeness to the particular margin
+- /
+- flex for 1D, grid for 2D
+- image sizing and setting appropriate yet responsive max/min width/heights was tricky... I still have a lot to learn about flex and grid properties 
 
+## challenges
+- **Project gallery**: 
+    - I struggled a little with how to layout the project cards. I discovered that what I needed was a masonry layout. I attempted to use CSS grid,
+as I read this was good for 2D layouts over flex, but it was a bit rigid - cards in the same row were forced to be the same height or there was blank space between rows if some cards were shorted in height than others within the same row. 
+    - I found a work-around by changing grid to a column layout, but this meant the project content order was in the column direction rather than row (i.e. most recent projects are in the first column and not the first row). Settled with this for now, will probably look into external libraries later.
+- **Animations**: I really wanted to add some fun, animated visual elements. 
+    - I knew of anime js, motion js, and gsap - I chose to try motion js because it seemed very commonly used and most approachable
+    - v0 and cursor were useful for starting out, to see how the specific things i need can be done. 
+    - I tried to consider how to make certain animations mobile friendly, specifically the polaroid scroll spread on the about-me page. 
+- **Playful design**: while I wanted this to be a somewhat formal showcase of my work, I also wanted it to be playful, artistic, and true to my personality. The design and process involved a lot of exploring what visually feels like me 
 
 ## resources
 - 

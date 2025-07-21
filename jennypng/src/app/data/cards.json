@@ -159,7 +159,7 @@
           }
         ],
         "footer": "c#, unity, clip studio paint",
-        "tags": ["featured", "game"]
+        "tags": ["game"]
        },
       {
         "title": "visualizAR",
@@ -241,7 +241,7 @@
           }
         ],
         "footer": "figma, react",
-        "tags": ["course", "ai/ml", "design"]
+        "tags": ["course", "ai/ml", "design", "featured"]
        },
       {
         "title": "shameify",
