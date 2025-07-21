@@ -1,6 +1,7 @@
 ---
 title: "Portfolio Dev Log"
 date: "2025-07-20"
+coverImage: "/images/port.png"
 excerpt: "Documenting the thought process and learnings behind creating my current portfolio website"
 ---
 
@@ -20,7 +21,7 @@ I mocked it up in Figma, watched 3-4 Youtube tutorials on making a portfolio wit
 3. I also really wanted to add a blog section because I love documenting thought processes behind projects, and this would be the ideal location
 
 
-I got the most frontend experience from working on a recent project, Jam Journal. Before this, I had some React and HTML/CSS experience
+I got the most frontend experience from working on a recent project, Jam Journal, using Next.js and Tailwind for the first time. Before this, I had some React and HTML/CSS experience
 but not enough to comfortably describe my skill level as intermediate. That project was a bit rushed because I was working on it in a 
 6 week build space - I wanted to use this portfolio revamp, something with no real deadline, as a chance to go slowly, code cleanly, and really strengthen
 my foundational knowledge.
@@ -65,6 +66,7 @@ as I read this was good for 2D layouts over flex, but it was a bit rigid - cards
 - top,left,right,bottom specify the closeness to the particular margin
 - /
 - flex for 1D, grid for 2D
+- image sizing and setting appropriate yet responsive max/min width/heights was tricky... I still have a lot to learn about flex and grid properties 
 
 ## blob animation
 
@@ -73,11 +75,26 @@ as I read this was good for 2D layouts over flex, but it was a bit rigid - cards
 ## polaroid scrolling animation
 
 ## paper texture on blog pages
+I wanted some whimsy/quirkiness to my design. I love texture - I saw one portfolio website that had a continuous grain effect
+in the background and I thought that was a really interesting way to add visual interest.
 
 ## nav bar hover animation
+I love incorporating hand-drawn/analog into digital experiences. It's just so fun lol. So I wanted an animated scribble to
+appear on hover, which I've seen in a few different portfolios.
 
 ## blog section
+I wanted to avoid the complexity of adding backend logic just for the blog, so I chose the approach of rendering markdown files as blog posts.
 
+The blog logic consists of:
+- _posts directory
+    - contains markdown files as blog content
+    - the underscore in the name prevents next.js app router from using this directory as a route 
+- lib/posts
+    - defines a Post type
+    - has a function `getPostSlugs`
+- blog/[slug] page 
+- blog page
+- blog-post UI component
 
 
 ## resources

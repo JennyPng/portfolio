@@ -217,6 +217,32 @@
         "footer": "java",
         "tags": ["course", "systems"]
        },
+       {
+        "title": "saavy - personalized fashion assistant",
+        "description": [
+          "AI shopping assistant that learns your style and only suggests products in your style. Stores real scraped product data and user preferences as vector embeddings.",
+          "Built with a team of engineers and MBA students for [CSE589: Software Entrepreneurship](https://courses.cs.washington.edu/courses/cse589/24wi/), and was unanimously voted as the top team by 16 VCs.",
+          "My contributions: UI and product design + pitched 3x to VCs."
+        ],
+        "dates": {
+            "startMonth": 1,
+            "startYear": 2024,
+            "endMonth": 3,
+            "endYear": 2024
+        },
+        "image_paths": [{
+          "image_path": "/images/savvy.png",
+          "image_alt": "saavy screenshot"
+        }],
+        "buttons": [
+          {
+            "text": "pitch vid @ pioneer square labs",
+            "link": "https://drive.google.com/file/d/1ZPA0HEnfVn-L1nkn_EBBREyTG_WMcWvU/view"
+          }
+        ],
+        "footer": "figma, react",
+        "tags": ["course", "ai/ml", "design"]
+       },
       {
         "title": "shameify",
         "description": [
