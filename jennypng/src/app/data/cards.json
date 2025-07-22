@@ -3,7 +3,7 @@
     "title": "hello, i'm jenny! ₊ ⊹ ",
     "description": [
       "I am a software engineer, artist, photographer, and musician, incoming @ Microsoft.",
-      "Previously, I've worked @ *Amazon, GoodRx*; researched AR/VR for accessibility @ [*UW Makeability Lab*](http://makeabilitylab.cs.washington.edu/); taught hardware/software interface @ [*Paul G. Allen School*](https://courses.cs.washington.edu/courses/cse351/).",
+      "Previously, I've worked @ *Amazon, GoodRx* & taught hardware/software interface @ [*Paul G. Allen School*](https://courses.cs.washington.edu/courses/cse351/).",
       "I currently enjoy full-stack engineering, game dev, new media. I will always enjoy dabbling in any form of creative self-expression.",
       "I love meeting new people - reach me at **jennypeng2020@gmail.com** ✉️"
     ],
@@ -160,18 +160,6 @@
         ],
         "footer": "c#, unity, clip studio paint",
         "tags": ["game"]
-       },
-      {
-        "title": "visualizAR",
-        "description": [
-          "Implementing real-time system to personalize audio-reactive AR visualizations for deaf and hard-of-hearing (DHH) users @ [Makeability Lab](http://makeabilitylab.cs.washington.edu)"
-        ],
-        "dates": {
-            "startMonth": 10,
-            "startYear": 2024
-        },
-        "footer": "c#, unity, gpt",
-        "tags": ["ai/ml", "research", "ar/vr"]
        },
        {
         "title": "runring",
@@ -365,7 +353,7 @@
       {
         "title": "Research Assistant @ [UW Makeability Lab](https://makeabilitylab.cs.washington.edu/)",
         "description": [
-          "Developing a novel LLM pipeline for personalization in AR for deaf and hard-of-hearing users"
+          "Developed a novel LLM pipeline for personalization in AR for deaf and hard-of-hearing users"
         ],
         "dates": {
           "startMonth": 10,

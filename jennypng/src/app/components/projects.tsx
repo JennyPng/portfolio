@@ -5,7 +5,7 @@ import { CardProps } from "./card";
 import { useState } from "react";
 import { motion, AnimatePresence, easeOut } from "framer-motion";
 
-const CardTags = ["featured", "all", "ar/vr", "web", "ai/ml", "game", "systems", "hackathon", "course" , "research"]
+const CardTags = ["featured", "all", "ar/vr", "web", "ai/ml", "game", "systems", "hackathon", "course"]
 
 const projects : CardProps[] = cardsData.projects
 
