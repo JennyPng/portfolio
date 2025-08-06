@@ -118,6 +118,7 @@ Scroll animation w motion js:
     - useEffect is for synchronizing with some external system
     - adds window event listener on 'resize' for a `checkMobile` function that updates isMobile and screen dimensions based on window width - so whenever the window is resized, this function runs
     - Creates [useTransform](https://motion.dev/docs/react-use-transform) hooks for each polaroid based on their initial and final XY pixels, which are computed by multiplying each polaroid's defined offset (a percentage) with the screen dimension
+        - maps input to output range based on the scrollYProgress
 
 ## blob animation
 TODO
