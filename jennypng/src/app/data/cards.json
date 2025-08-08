@@ -353,7 +353,7 @@
       {
         "title": "Undergraduate Research Assistant @ [UW Makeability Lab](https://makeabilitylab.cs.washington.edu/)",
         "description": [
-          "Developed a multi-agent LLM pipeline using Unity, C#, gpt-4o, and prompt engineering to personalize generative, real-time sound-reactive visualizations in AR for deaf and hard-of-hearing users.",
+          "Developed a multi-agent LLM pipeline using Unity, C#, gpt-4o, and prompt engineering to enable deaf and hard-of-hearing (DHH) users to author personalized, real-time sound-reactive visualizations in AR.",
           "Co-authored a workshop paper demoing code generation for procedural animations, which are compiled at runtime and rendered on HoloLens to enhance accessibility."
         ],
         "dates": {

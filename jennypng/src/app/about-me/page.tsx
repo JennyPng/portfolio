@@ -16,8 +16,8 @@ export default function AboutMe() {
                         <br></br>
 
                         From coding <ImageTrigger text="warrior cat games on Scratch" imageSrc="/images/greenfur.png" altText="image of warrior cat games on Scratch"></ImageTrigger>, to <ImageTrigger imageSrc="/images/vend.jpg" altText="photo of art vending" text="making art prints & stickers"></ImageTrigger>,
-                        to <ImageTrigger text="selling clothing with original art" imageSrc="/images/picnic.png" altText="image of clothing designed" href="https://www.instagram.com/shop.cerulean"></ImageTrigger>, 
-                        to <ImageTrigger text="singing and writing songs" imageSrc="/images/bittermilk.png" altText="image of me singing and writing songs" href="https://open.spotify.com/artist/0sWDV5UY1Rfbk4ZAR3HCUq"></ImageTrigger>, 
+                        to <ImageTrigger text="selling clothing with original art" imageSrc="/images/picnic.png" altText="image of clothing designed"></ImageTrigger>, 
+                        to <ImageTrigger text="singing and writing songs" imageSrc="/images/bittermilk.png" altText="image of me singing and writing songs"></ImageTrigger>, 
                         to <ImageTrigger text="planning photoshoots with friends" imageSrc="/images/chess.jpg" altText="photography example"></ImageTrigger>, I have always found creating to be the most meaningful way to spend my time.
                         
                         <br></br>
