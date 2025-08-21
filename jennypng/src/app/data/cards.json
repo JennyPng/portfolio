@@ -2,8 +2,8 @@
   "intro": {
     "title": "hello, i'm jenny! ₊ ⊹ ",
     "description": [
-      "I am a software engineer, artist, photographer, and musician, incoming @ Microsoft.",
-      "Previously, I've worked @ *Amazon, GoodRx*, researched LLMs + AR for accessibility @ [Makeability Lab](https://makeabilitylab.cs.washington.edu/), & taught hardware/software interface @ [*Paul G. Allen School*](https://courses.cs.washington.edu/courses/cse351/).",
+      "I am a software engineer @ Microsoft working on the Azure SDK team, an artist, photographer, and musician.",
+      "Previously, I've worked @ *Amazon, GoodRx*, researched LLMs + AR for accessibility @ [Makeability Lab](https://makeabilitylab.cs.washington.edu/member/jennypeng/), & taught hardware/software interface @ [*Paul G. Allen School*](https://courses.cs.washington.edu/courses/cse351/).",
       "I currently enjoy full-stack engineering, game dev, new media. I will always enjoy dabbling in any form of creative self-expression.",
       "I love meeting new people - reach me at **jennypeng2020@gmail.com** ✉️"
     ],
@@ -354,7 +354,7 @@
         "title": "Undergraduate Research Assistant @ [UW Makeability Lab](https://makeabilitylab.cs.washington.edu/)",
         "description": [
           "Developed a multi-agent LLM pipeline using Unity, C#, gpt-4o, and prompt engineering to enable deaf and hard-of-hearing (DHH) users to author personalized, real-time sound-reactive visualizations in AR.",
-          "Co-authored a workshop paper demoing code generation for procedural animations, which are compiled at runtime and rendered on HoloLens to enhance accessibility."
+          "Co-authored a workshop paper appearing at [ISMAR](https://www.ieeeismar.net/2025/) IDEATExR 2025, demoing code generation for procedural animations, which are compiled at runtime and rendered on HoloLens to enhance accessibility."
         ],
         "dates": {
           "startMonth": 10,
