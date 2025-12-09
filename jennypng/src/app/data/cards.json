@@ -114,8 +114,7 @@
             "endYear": 2025
         },
         "description": [
-          "Real-time system using emotion classification, live transcription, and AR to provide live instructor feedback during lecture when students are confused.",
-          "YOLOv11 detects student faces, while a CNN continuously predicts their emotions to identify spikes in negative emotions. Simultaneously, Faster-Whisper transcribes the lecture, and when confusion spikes occur, the relevant transcript segment is sent to GPT to identify confusing topics."
+          "Real-time system using emotion classification, live transcription, and AR to provide live instructor feedback during lecture when students are confused."
         ],
         "image_paths": [{
           "image_path": "/images/emo.gif",
@@ -235,7 +234,7 @@
         "title": "shameify",
         "description": [
           "Chrome extension that shames you while online shopping, to combat overconsumption. An LLM roasts your ethics based on the product details.",
-          "Built for [Treehacks 2024](https://dh24.dubhacks.co/)."
+          "Built for [Treehacks 2024](https://2024.treehacks.com/)."
         ],
         "dates": {
             "startMonth": 2,
@@ -351,15 +350,34 @@
     ],
     "experience": [
       {
+        "title": "Software Engineer @ Microsoft",
+        "description": [
+          "Working on improving developer experience for creating + releasing Azure SDKs!"
+        ],
+        "dates": {
+          "startMonth": 8,
+          "startYear": 2025
+        },
+        "footer": "python, c#, mcp, azure devops"
+      },
+      {
         "title": "Undergraduate Research Assistant @ [UW Makeability Lab](https://makeabilitylab.cs.washington.edu/)",
         "description": [
-          "Developed a multi-agent LLM pipeline using Unity, C#, gpt-4o, and prompt engineering to enable deaf and hard-of-hearing (DHH) users to author personalized, real-time sound-reactive visualizations in AR.",
-          "Co-authored a workshop paper appearing at [ISMAR](https://www.ieeeismar.net/2025/) IDEATExR 2025, demoing code generation for procedural animations, which are compiled at runtime and rendered on HoloLens to enhance accessibility."
+          "Developed a multi-agent LLM pipeline using Unity, C#, gpt-4o, and prompt engineering to enable deaf and hard-of-hearing (DHH) users to author personalized, real-time sound-reactive AR interfaces.",
+          "Co-authored a publication for [ISMAR](https://www.ieeeismar.net/2025/) IDEATExR 2025, demoing code generation for procedural animations, which are compiled at runtime and rendered on HoloLens to enhance accessibility."
         ],
         "dates": {
           "startMonth": 10,
-          "startYear": 2024
+          "startYear": 2024,
+          "endMonth": 8,
+          "endYear": 2025
         },
+        "buttons": [
+          {
+            "text": "publication",
+            "link": "https://ieeexplore.ieee.org/document/11236143"
+          }
+        ],
         "footer": "c#, unity, gpt, prompt engineering"
       },
       {

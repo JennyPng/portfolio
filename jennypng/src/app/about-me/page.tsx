@@ -12,8 +12,8 @@ export default function AboutMe() {
                     <h1>hi! i&apos;m jenny, and</h1>
                     <p className="max-w-full sm:max-w-[70%] text-tertiary-green">
                         I have always loved to create, though the medium of choice has shifted over the years.
-                        <br></br>
-                        <br></br>
+                        <br></br> 
+                        <br></br> 
 
                         From coding <ImageTrigger text="warrior cat games on Scratch" imageSrc="/images/greenfur.png" altText="image of warrior cat games on Scratch"></ImageTrigger>, to <ImageTrigger imageSrc="/images/vend.jpg" altText="photo of art vending" text="making art prints & stickers"></ImageTrigger>,
                         to <ImageTrigger text="selling clothing with original art" imageSrc="/images/picnic.png" altText="image of clothing designed"></ImageTrigger>, 
