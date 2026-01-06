@@ -61,7 +61,6 @@ export function PhotoGallery({ images }: PhotoGalleryProps) {
               alt={image.alt}
               fill
               sizes="(max-width: 600px) 45vw, (max-width: 1024px) 33vw, 25vw"
-              loading="lazy"
               className="absolute inset-0 h-full w-full object-cover hover:cursor-pointer transition-transform duration-300 group-hover:scale-105"
             />
           </button>
@@ -102,7 +101,6 @@ export function PhotoGallery({ images }: PhotoGalleryProps) {
                   width={naturalSize.width}
                   height={naturalSize.height}
                   sizes="100vw"
-                  loading="lazy"
                   onLoadingComplete={({ naturalWidth, naturalHeight }) =>
                     setNaturalSize({ width: naturalWidth, height: naturalHeight })
                   }
