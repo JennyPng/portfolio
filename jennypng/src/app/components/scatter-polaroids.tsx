@@ -24,27 +24,27 @@ const polaroids: ScatterPolaroid[] = [
         mobileFinalOffset: { x: 0, y: -200 } 
     },
     {
-        imageSrc: "/images/lab.jpg",
+        imageSrc: "/images/grad.jpg",
         altText: "picture of me",
-        caption: "Commemorating the hours spent debugging in the CSE labs💻",
+        caption: "I graduated from the University of Washington with a bachelors in CS 🥳",
         initialOffset: { x: 0, y: 0 },
         finalOffset: { x: -25, y: 0 },
         mobileInitialOffset: { x: 0, y: -25 },
         mobileFinalOffset: { x: 0, y: -50 } 
     },
     {
-        imageSrc: "/images/cq.jpg",
-        altText: "picture of chongqing temple",
-        caption: "📍Chongqing. a temple beautiful at every angle",
+        imageSrc: "/images/jp.jpg",
+        altText: "photo of tokyo skytree",
+        caption: "Photo from my first trip to Japan📷",
         initialOffset: { x: 0, y: 0 },
         finalOffset: { x: 20, y: 0 },
         mobileInitialOffset: { x: 0, y: 25 },
         mobileFinalOffset: { x: 0, y: 20 }
     },
     {
-        imageSrc: "/images/jp.jpg",
-        altText: "photo of tokyo skytree",
-        caption: "Photo from my first trip to Japan📷",
+        imageSrc: "/images/versailles.jpg",
+        altText: "picture of chongqing temple",
+        caption: "📍Palace of Versailles. Insane.",
         initialOffset: { x: 0, y: 0 },
         finalOffset: { x: 65, y: 0 }, 
         mobileInitialOffset: { x: 0, y: 100 },

@@ -7,7 +7,7 @@ export default function AboutMe() {
     return (
         <div className="w-full h-fit">
             <div className="flex flex-col overflow-x-hidden min-h-[80vh] overflow-y-hidden sm:flex-row mb-0 p-4 md:pl-20 md:pt-20 font-[family-name:var(--font-geist-sans)]">
-                <Polaroid imageSrc="/images/grad.jpg" altText="picture of me" caption="I graduated from the University of Washington with a bachelors in CS 🥳" />
+                <Polaroid imageSrc="/images/pizza.jpg" altText="picture of me" caption="my attempt at making an aesthetic pizza 🍕" />
                 <div className="mt-8 sm:mt-0 sm:ml-8">
                     <h1>hi! i&apos;m jenny, and</h1>
                     <p className="max-w-full sm:max-w-[70%] text-tertiary-green">

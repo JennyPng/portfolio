@@ -2,15 +2,14 @@
   "intro": {
     "title": "hello, i'm jenny! ₊ ⊹ ",
     "description": [
-      "I am a software engineer @ Microsoft working on the Azure SDK team, an artist, photographer, and musician.",
+      "I am a software engineer @ Microsoft working on the Azure SDK team, an artist, and musician.",
       "Previously, I've worked @ *Amazon, GoodRx*, researched LLMs + AR for accessibility @ [Makeability Lab](https://makeabilitylab.cs.washington.edu/member/jennypeng/), & taught hardware/software interface @ [*Paul G. Allen School*](https://courses.cs.washington.edu/courses/cse351/).",
-      "I currently enjoy full-stack engineering, game dev, new media. I will always enjoy dabbling in any form of creative self-expression.",
-      "I love meeting new people - reach me at **jennypeng2020@gmail.com** ✉️"
+      "I currently enjoy full-stack engineering, game dev, new media. I will always enjoy dabbling in any form of creative self-expression."
     ],
     "type_to_link": [],
     "buttons": [
       {
-        "text": "more about me",
+        "text": "about",
         "link": "/about-me",
         "internal": true
       },
@@ -20,14 +19,14 @@
         "internal": true
       }
     ],
-    "footer": "",
+    "footer": "✉️ jennypeng2020@gmail.com",
     "drag": true
   },
     "projects": [
       {
         "title": "jam journal ₊˚♬",
         "description": [
-          "For people that analyze lyrics, make ultra-specific playlists, or just want to document their thoughts on music!",
+          "For people like me that love music and analyzing it!",
           "Import songs and control playback via the YouTube API, take notes on specific songs, and add timestamped or lyric-specific annotations while listening in-app."
         ],
         "dates": {
@@ -75,7 +74,6 @@
         "title": "AR RC car racing 🏎️",
         "description": [
           "Multiplayer AR racing game allowing players in the same room to compete on custom, **environment-aware, procedurally-generated racetracks.**",
-          "Implemented optimized **3D pathfinding** using octrees and A-star search for obstacle avoidance, and RPCs for synchronizing networked objects.",
           "Built for [VR Capstone](https://courses.cs.washington.edu/courses/cse481v/25sp/demo-day/) course in a team of 4, using Meta Quest."
         ],
         "dates": {
@@ -207,7 +205,7 @@
        {
         "title": "saavy - personalized fashion assistant",
         "description": [
-          "AI shopping assistant that learns your style and only suggests products in your style. Stores real scraped product data and user preferences as vector embeddings.",
+          "AI shopping assistant that learns your style and only suggests products in your style.",
           "Built with a team of engineers and MBA students for [CSE589: Software Entrepreneurship](https://courses.cs.washington.edu/courses/cse589/24wi/), and was unanimously voted as the top team by 16 VCs.",
           "My contributions: UI and product design + pitched 3x to VCs."
         ],
@@ -363,8 +361,7 @@
       {
         "title": "Undergraduate Research Assistant @ [UW Makeability Lab](https://makeabilitylab.cs.washington.edu/)",
         "description": [
-          "Developed a multi-agent LLM pipeline using Unity, C#, gpt-4o, and prompt engineering to enable deaf and hard-of-hearing (DHH) users to author personalized, real-time sound-reactive AR interfaces.",
-          "Co-authored a publication for [ISMAR](https://www.ieeeismar.net/2025/) IDEATExR 2025, demoing code generation for procedural animations, which are compiled at runtime and rendered on HoloLens to enhance accessibility."
+          "Developed an LLM-powered AR pipeline using Unity, C#, gpt-4o, and prompt engineering to enable deaf and hard-of-hearing (DHH) users to author personalized, real-time sound-reactive AR interfaces."
         ],
         "dates": {
           "startMonth": 10,
@@ -383,11 +380,10 @@
       {
         "title": "Junior Software Developer @ Amazon",
         "description": [
-          "• Implemented a new UI feature that leverages generative AI to give associates in book manufacturing sites increased visibility into known technical issues.",
-          "• Migrated a printer configuration feature by updating GraphQL schema, a Golang microservice, backend Typescript service, Java client, and React frontend.",
-          "• Enhanced clarity of web pages used by 300+ associates across 5 book manufacturing sites; wrote unit tests in React and Typescript, and communicated requirements with the PM, UX designer, and QA testing team.",
-          "• Eliminated 100,000 corrupt manufacturing requests in production by writing and executing a Python script for backfill.",
-          "• Provided crucial insights for a dashboard redesign by disambiguating legacy Java code and complex SQL queries."
+          "• Enhanced clarity of web pages used by 300+ associates across 5 book manufacturing sites.",
+          "• Reduced on-call load and average device downtime by implementing a UI popup that gives workers visibility into known technical issues.",
+          "• Migrated a printer configuration feature, enabling a print setting for a specific printer model.",
+          "• Disambiguated legacy Java code and complex SQL queries, enabling faster completion of a critical dashboard redesign."
         ],
         "dates": {
           "startMonth": 9,
@@ -400,8 +396,8 @@
       {
         "title": "Software Engineer Intern @ GoodRx",
         "description": [
-          "• Increased efficiency of incident investigation across all teams in the company by planning and implementing ownership attribution across GraphQL domains, creating custom metrics, and increasing granularity of Datadog monitoring to alert teams for issues actually relevant to them.",
-          "• Designed new GraphQL schema and implemented query resolvers and API clients in TypeScript; added features that enable frontend clients to easily fetch a user’s location information to surface relevant search results, and also fetch retail pharmacy details."
+          "• Accelerated incident investigation across all engineering teams by implementing ownership attribution across GraphQL domains, creating custom metrics, and increasing granularity of Datadog monitoring.",
+          "• Designed GraphQL schema, query resolvers, and API clients in Typescript, enabling frontend clients to fetch user location data to surface relevant search results."
         ],
         "dates": {
           "startMonth": 6,
@@ -414,8 +410,7 @@
       {
         "title": "Teaching Assistant @ [Paul G. Allen School](https://courses.cs.washington.edu/courses/cse351/)",
         "description": [
-          "• Taught 30 students in a weekly review section. Held weekly office hours to answer individual student questions and assisted in debugging labs about buffer overflow exploits, cache policies, and dynamic memory allocation.",
-          "• Revised and wrote course materials for 150+ students; topics include introducing C, x86-64 assembly, number representation, memory management, basic computer architecture, and working in a Linux environment."
+          "• Taught weekly classes to 30 students, refined course materials for 150+ students, and provided debugging guidance for labs about buffer overflow exploits, x86-64 assembly, cache policies, and dynamic memory allocation."
         ],
         "dates": {
           "startMonth": 9,
