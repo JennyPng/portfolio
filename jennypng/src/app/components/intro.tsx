@@ -17,8 +17,8 @@ export default function Intro({className} : {className?: string}) {
           <Image
             src={isHovered ? "/images/2025me2.png" : "/images/2025me1.png"}
             alt="Jenny"
-            width={1200}
-            height={1500}
+            width={600}
+            height={800}
             className="object-cover transition-opacity mx-0 duration-300"
           />
         </div>

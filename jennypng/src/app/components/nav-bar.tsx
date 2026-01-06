@@ -8,7 +8,7 @@ const navLinks = [
   { href: "/#experience", label: "resume" },
   { href: "/about-me", label: "about" },
   { href: "/blog", label: "blog" },
-  // { href: "/art", label: "art" },
+  { href: "/art", label: "🎨" },
   { href: "https://jennypng.netlify.app/", label: "🌱", external: true },
 ];
 

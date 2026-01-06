@@ -43,7 +43,7 @@ const polaroids: ScatterPolaroid[] = [
     },
     {
         imageSrc: "/images/versailles.jpg",
-        altText: "picture of chongqing temple",
+        altText: "picture of versailles",
         caption: "📍Palace of Versailles. Insane.",
         initialOffset: { x: 0, y: 0 },
         finalOffset: { x: 65, y: 0 }, 

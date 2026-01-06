@@ -29,7 +29,7 @@ export interface CardProps {
   drag?: boolean
 }
 
-const formatText = (text: string | string[], size: "md" | "sm") => {
+export const formatText = (text: string | string[], size: "md" | "sm") => {
   const lines = Array.isArray(text) ? text : text.split('\n');
 
   // parse bold + italic in a string fragment
